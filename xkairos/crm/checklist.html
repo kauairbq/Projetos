@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checklist de Projeto - Xkairos Tech</title>
+<style>
+    body { font-family: Arial, sans-serif; background: #121212; color: #fff; padding: 20px; }
+    h1 { color: #ffcc00; }
+    ul { list-style: none; padding: 0; }
+    li { background: #1f1f1f; margin: 10px 0; padding: 15px; border-radius: 8px; display: flex; align-items: center; }
+    li.completed { background: #28a745; color: #fff; text-decoration: line-through; }
+    input[type="checkbox"] { margin-right: 15px; transform: scale(1.5); }
+    button { padding: 10px 20px; margin-top: 20px; border: none; border-radius: 5px; background: #ffcc00; color: #121212; font-weight: bold; cursor: pointer; }
+    .progress { margin-top: 20px; }
+</style>
+</head>
+<body>
+<h1>Checklist de Projeto - Xkairos Tech</h1>
+<label for="projeto_id">ID do Projeto:</label>
+<input type="number" id="projeto_id" value="1">
+<button onclick="loadChecklist()">Carregar Checklist</button>
+<button id="saveBtn">Salvar Progresso</button>
+<button id="pdfBtn">Gerar PDF</button>
+
+<ul id="checklist">
+    <li><input type="checkbox" id="etapa1"> Solicitação recebida e registrada</li>
+    <li><input type="checkbox" id="etapa2"> Consultoria feita e aprovada</li>
+    <li><input type="checkbox" id="etapa3"> Peças compradas / recebidas</li>
+    <li><input type="checkbox" id="etapa4"> Montagem completa</li>
+    <li><input type="checkbox" id="etapa5"> Testes de performance realizados</li>
+    <li><input type="checkbox" id="etapa6"> Limpeza final e ajustes</li>
+    <li><input type="checkbox" id="etapa7"> Entrega realizada</li>
+    <li><input type="checkbox" id="etapa8"> Registro no CRM atualizado</li>
+    <li><input type="checkbox" id="etapa9"> Suporte pós-venda ativo</li>
+</ul>
+
+<div class="progress">
+    <p>Progresso: <span id="progress">0%</span></p>
+    <progress id="progressBar" value="0" max="100"></progress>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+const projeto_id = document.getElementById('projeto_id').value;
+
+function loadChecklist() {
+    fetch('checklist_api.php', {
+        method:'POST',
+        headers:{'Content-Type':'application/x-www-form-urlencoded'},
+        body:new URLSearchParams({action:'load', projeto_id})
+    })
+    .then(res=>res.json())
+    .then(data=>{
+        const ul = document.getElementById('checklist');
+        ul.innerHTML = '';
+        data.forEach(item=>{
+            const li = document.createElement('li');
+            li.innerHTML = `<input type="checkbox" data-etapa="${item.etapa}" ${item.concluida==1?'checked':''}> ${item.etapa}`;
+            if(item.concluida==1) li.classList.add('completed');
+            ul.appendChild(li);
+        });
+
+        document.querySelectorAll('#checklist input').forEach(chk=>{
+            chk.addEventListener('change', ()=>{
+                if(chk.checked){
+                    chk.parentElement.classList.add('completed');
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Etapa concluída!',
+                        text: chk.dataset.etapa,
+                        toast: true,
+                        position: 'top-end',
+                        timer: 1500,
+                        showConfirmButton: false
+                    });
+                } else {
+                    chk.parentElement.classList.remove('completed');
+                }
+                updateProgress();
+            });
+        });
+        updateProgress();
+    });
+}
+
+// salvar checklist
+document.getElementById('saveBtn').addEventListener('click', ()=>{
+    const data = {};
+    document.querySelectorAll('#checklist input').forEach(chk=>{
+        data[chk.dataset.etapa] = chk.checked ? 1 : 0;
+    });
+
+    fetch('checklist_api.php', {
+        method:'POST',
+        headers:{'Content-Type':'application/x-www-form-urlencoded'},
+        body:new URLSearchParams({action:'save', projeto_id, data: JSON.stringify(data)})
+    }).then(res=>res.json()).then(res=>{
+        if(res.status==='success'){
+            Swal.fire({
+                icon: 'success',
+                title: 'Progresso salvo!',
+                toast: true,
+                position: 'top-end',
+                timer: 1500,
+                showConfirmButton: false
+            });
+        }
+    });
+});
+
+// gerar PDF
+document.getElementById('pdfBtn').addEventListener('click', ()=>{
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = 'checklist_api.php';
+    form.target = '_blank';
+
+    const action = document.createElement('input');
+    action.name = 'action'; action.value = 'pdf'; form.appendChild(action);
+
+    const pid = document.createElement('input');
+    pid.name = 'projeto_id'; pid.value = projeto_id; form.appendChild(pid);
+
+    document.body.appendChild(form);
+    form.submit();
+    document.body.removeChild(form);
+});
+
+// inicializa
+loadChecklist();
+
+function updateProgress() {
+    const checked = document.querySelectorAll('#checklist input:checked').length;
+    const total = document.querySelectorAll('#checklist input').length;
+    const percent = Math.round((checked / total) * 100);
+    document.getElementById('progress').textContent = percent + '%';
+    document.getElementById('progressBar').value = percent;
+}
+</script>
+</body>
+</html>

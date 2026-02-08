@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat em Tempo Real</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="header">
+      <a class="back" href="/index.html">← Voltar ao portfólio</a>
+      <div class="brand">Chat em Tempo Real</div>
+      <div class="status" id="status">Offline · sala geral</div>
+      <button class="connect" id="connectBtn">Conectar</button>
+    </div>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <div>Salas</div>
+        <div class="rooms" id="rooms"></div>
+        <div class="hint" style="color:#9ca3af; font-size:13px">
+          Envio de ficheiros (mock offline). Para realtime, corra o servidor 4001.
+        </div>
+      </aside>
+
+      <section class="main">
+        <div class="messages" id="messages"></div>
+        <form class="form" id="form">
+          <input type="text" id="text" placeholder="Escreve a mensagem" />
+          <input type="file" id="file" />
+          <button class="send" type="submit">Enviar</button>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+/* Xkairos Tech - Admin Dashboard Page */
+/* ================================================== */
+
+/* Page-specific overrides and additions */
+.admin-dashboard {
+    background: linear-gradient(135deg, #0A192F 0%, rgba(13, 26, 46, 0.95) 100%);
+    min-height: 100vh;
+}
+
+.admin-main h1 {
+    color: #64FFDA;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #64FFDA, #64FFDA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.admin-main h2 {
+    color: #E6F1FF;
+    font-size: 1.8rem;
+    margin: 3rem 0 1.5rem 0;
+    border-bottom: 2px solid #64FFDA;
+    padding-bottom: 0.5rem;
+}
+
+/* Dashboard Cards Enhancements */
+.dashboard-cards {
+    margin-bottom: 3rem;
+}
+
+.dashboard-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #64FFDA, #64FFDA);
+}
+
+.dashboard-card:hover::before {
+    height: 6px;
+    transition: height 0.3s ease;
+}
+
+.dashboard-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #E6F1FF;
+}
+
+.dashboard-card .value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #64FFDA;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Tables Enhancements */
+.admin-table {
+    margin-bottom: 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.admin-table table {
+    background: rgba(6, 11, 19, 0.9);
+}
+
+.admin-table th {
+    background: linear-gradient(135deg, rgba(79, 179, 255, 0.1), rgba(79, 179, 255, 0.05));
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.admin-table td {
+    transition: background-color 0.3s ease;
+}
+
+.admin-table tr:hover td {
+    background: rgba(79, 179, 255, 0.05);
+}
+
+/* Quick Management Section */
+.admin-main > ul {
+    background: rgba(13, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(79, 179, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.admin-main > ul li {
+    margin-bottom: 1rem;
+}
+
+.admin-main > ul li a {
+    display: block;
+    padding: 1rem 1.5rem;
+    color: #E6F1FF;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    background: rgba(79, 179, 255, 0.05);
+}
+
+.admin-main > ul li a:hover {
+    background: rgba(79, 179, 255, 0.1);
+    border-color: #64FFDA;
+    transform: translateX(10px);
+    color: #64FFDA;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .admin-main h1 {
+        font-size: 2rem;
+    }
+
+    .admin-main h2 {
+        font-size: 1.5rem;
+    }
+
+    .dashboard-card .value {
+        font-size: 2rem;
+    }
+
+    .admin-main > ul {
+        padding: 1.5rem;
+    }
+
+    .admin-main > ul li a {
+        padding: 0.75rem 1rem;
+    }
+}

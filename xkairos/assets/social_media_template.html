@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Post Redes Sociais - Xkairos Tech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .post-template {
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .post-content {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+        }
+        .cta {
+            background: #ffcc00;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .hashtags {
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="post-template">
+        <div class="logo">
+            <i class="fas fa-cogs"></i> Xkairos Tech
+        </div>
+        <div class="post-content">
+            Monte seu PC gamer personalizado com os melhores componentes!<br>
+            💻 Alta performance garantida<br>
+            🔧 Montagem profissional<br>
+            📞 Consultoria gratuita
+        </div>
+        <a href="#" class="cta">Solicitar Orçamento</a>
+        <div class="hashtags">
+            #XkairosTech #PCGamer #MontagemPC #HardwarePortugal
+        </div>
+    </div>
+
+    <script>
+        // Script para gerar variações do template
+        function generateVariation() {
+            const variations = [
+                "Seu PC dos sonhos está a um clique! 🚀",
+                "Performance máxima para gamers exigentes 🎮",
+                "Montagem profissional com garantia 💪"
+            ];
+            const randomVariation = variations[Math.floor(Math.random() * variations.length)];
+            document.querySelector('.post-content').innerHTML = randomVariation + '<br>💻 Alta performance garantida<br>🔧 Montagem profissional<br>📞 Consultoria gratuita';
+        }
+    </script>
+</body>
+</html>

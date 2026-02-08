@@ -1,0 +1,14 @@
+- [x] Edit crm/dashboard.php to add conditional logic for admin vs client
+- [x] Include admin statistics queries in PHP
+- [x] Add HTML sections for admin stats, recent tables, management links
+- [x] Include admin CSS link if needed
+- [x] Test unified dashboard for both user types
+- [x] Remove admin/dashboard.php
+- [x] Check links and redirects still work
+- [x] Fix solicitacoes table structure (add cliente_id column)
+- [x] Create alter_solicitacoes_table.php script
+- [x] Execute alter_solicitacoes_table.php to fix existing table
+- [x] Test client dashboard after table fix
+- [x] Change client login redirect to index.php instead of dashboard.php
+- [x] Update navigation to show "Área do Cliente" link when logged in
+- [x] Add Xkairos Tech logo to cliente/dashboard.php header

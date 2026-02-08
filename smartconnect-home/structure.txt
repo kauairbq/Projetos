@@ -1,0 +1,5 @@
+﻿C:\wamp64\www\Fullstack MD\projects\smartconnect-home
+|-- docs
+|-- src
+|-- TODO.md
+|-- README.md

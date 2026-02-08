@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: saas_billing_db
+    restart: unless-stopped
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_DB: saas_billing
+      POSTGRES_USER: saas_user
+      POSTGRES_PASSWORD: saas_pass
+    volumes:
+      - saas_billing_data:/var/lib/postgresql/data
+
+volumes:
+  saas_billing_data:

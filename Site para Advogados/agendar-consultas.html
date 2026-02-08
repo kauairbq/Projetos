@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendar Consultas | Advocacia Prime</title>
+  <base href="./" />
+  <style>
+    :root {
+      --bg: #0b1f34;
+      --panel: #102744;
+      --panel-strong: #16345a;
+      --gold: #d7b86a;
+      --text: #f4f6fb;
+      --muted: #c9d3e7;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(215, 184, 106, 0.12), transparent 35%),
+                  radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.06), transparent 35%),
+                  var(--bg);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    .shell { max-width: 1100px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 22px; }
+    .brand { font-weight: 800; letter-spacing: 0.02em; }
+    .links a { margin-left: 12px; font-weight: 700; padding: 9px 12px; border-radius: 10px; border: 1px solid transparent; transition: all 0.15s ease; }
+    .links a:hover { border-color: var(--gold); background: rgba(215, 184, 106, 0.1); }
+    h1 { margin: 10px 0; font-size: 30px; }
+    .lede { color: var(--muted); line-height: 1.6; }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: var(--shadow); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 12px; margin-top: 16px; }
+    .cta { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+    .btn { padding: 11px 15px; border-radius: 12px; border: 1px solid var(--gold); color: var(--text); font-weight: 800; background: transparent; transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
+    .primary { background: var(--gold); color: #0c1220; border: none; }
+    .primary:hover { background: #e4c880; }
+    form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+    form textarea { grid-column: span 2; }
+    input, textarea, select {
+      width: 100%; padding: 11px 12px; border-radius: 10px;
+      border: 1px solid var(--border); background: rgba(255,255,255,0.03); color: var(--text);
+      font-size: 14px;
+    }
+    input::placeholder, textarea::placeholder { color: #aebcd5; }
+    @media(max-width: 800px){ form { grid-template-columns: 1fr; } form textarea { grid-column: span 1; } .nav { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="nav">
+      <div class="brand">Agendar Consulta</div>
+      <div class="links">
+        <a href="/index.html">&larr; Voltar ao portfólio</a>
+        <a href="index.html">Início</a>
+        <a href="areas-de-atuacao.html">Áreas</a>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h1>Agende a tua consulta</h1>
+      <p class="lede">Escolha o horário e indique o tema. Responderemos em 1 dia útil para confirmar.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://calendly.com/agenda-consulta" target="_blank" rel="noopener">Agendar via Calendly</a>
+        <a class="btn" href="mailto:contacto@advocacia-prime.pt">contacto@advocacia-prime.pt</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="panel">
+        <strong>Agendamento rápido</strong>
+        <p class="lede">Calendário atualizado, confirmação automática e lembretes por email.</p>
+      </div>
+      <div class="panel">
+        <strong>Formatos</strong>
+        <p class="lede">Reunião presencial (Lisboa/Porto) ou online via Teams/Zoom.</p>
+      </div>
+      <div class="panel">
+        <strong>Confidencialidade</strong>
+        <p class="lede">Privacidade garantida conforme RGPD e regras deontológicas.</p>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:16px;">
+      <strong>Solicitar contacto</strong>
+      <form>
+        <input type="text" name="nome" placeholder="Nome completo" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="telefone" placeholder="Telefone" />
+        <select name="assunto">
+          <option value="">Escolha o tema</option>
+          <option>Direito Empresarial</option>
+          <option>Trabalho</option>
+          <option>Fiscal</option>
+          <option>Proteção de Dados</option>
+          <option>Outro</option>
+        </select>
+        <textarea name="mensagem" rows="4" placeholder="Descreva brevemente a necessidade"></textarea>
+        <button type="button" class="btn primary">Enviar pedido</button>
+      </form>
+      <p class="lede" style="margin-top:10px;">Este formulário é ilustrativo; para resposta imediata, use o botão Calendly.</p>
+    </div>
+  </div>
+</body>
+</html>

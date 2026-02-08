@@ -1,0 +1,38 @@
+header {
+  background: var(--color-bg-alt);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--spacing-md);
+}
+
+nav ul li a {
+  color: var(--color-text);
+  font-weight: 500;
+  position: relative;
+}
+
+nav ul li a:hover {
+  color: var(--color-primary);
+}

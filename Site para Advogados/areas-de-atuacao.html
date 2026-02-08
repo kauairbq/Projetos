@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Áreas de Atuação | Advocacia Prime</title>
+  <base href="./" />
+  <style>
+    :root {
+      --bg: #0b1f34;
+      --panel: #102744;
+      --panel-strong: #16345a;
+      --gold: #d7b86a;
+      --text: #f4f6fb;
+      --muted: #c9d3e7;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(215, 184, 106, 0.12), transparent 35%),
+                  radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.06), transparent 35%),
+                  var(--bg);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    .shell { max-width: 1100px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 22px; }
+    .brand { font-weight: 800; letter-spacing: 0.02em; }
+    .links a { margin-left: 12px; font-weight: 700; padding: 9px 12px; border-radius: 10px; border: 1px solid transparent; transition: all 0.15s ease; }
+    .links a:hover { border-color: var(--gold); background: rgba(215, 184, 106, 0.1); }
+    h1 { margin: 10px 0; font-size: 30px; }
+    .lede { color: var(--muted); line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); gap: 12px; margin-top: 16px; }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 16px; box-shadow: var(--shadow); }
+    .panel strong { display: block; margin-bottom: 6px; }
+    .tag { display: inline-block; background: rgba(215, 184, 106, 0.14); color: var(--gold); padding: 6px 9px; border-radius: 10px; font-weight: 700; margin: 6px 6px 0 0; }
+    .cta { margin-top: 18px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn { padding: 11px 15px; border-radius: 12px; border: 1px solid var(--gold); color: var(--text); font-weight: 800; background: transparent; transition: transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease; }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.35); }
+    .primary { background: var(--gold); color: #0c1220; border: none; }
+    .primary:hover { background: #e4c880; }
+    @media(max-width: 800px){ .nav { flex-direction: column; align-items: flex-start; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="nav">
+      <div class="brand">Áreas de Atuação</div>
+      <div class="links">
+        <a href="/index.html">&larr; Voltar ao portfólio</a>
+        <a href="index.html">Início</a>
+        <a href="agendar-consultas.html">Agendar</a>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-bottom:16px;">
+      <h1>Especialização jurídica focada no teu negócio</h1>
+      <p class="lede">Atuamos com equipas dedicadas a cada área, garantindo rigor técnico, celeridade e acompanhamento próximo.</p>
+      <div class="cta">
+        <a class="btn primary" href="agendar-consultas.html">Agendar consulta</a>
+        <a class="btn" href="mailto:contacto@advocacia-prime.pt">contacto@advocacia-prime.pt</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="panel">
+        <strong>Direito Empresarial</strong>
+        <p class="lede">Contratos comerciais, constituição de sociedades, pactos de sócios e governação corporativa.</p>
+        <span class="tag">Contratos</span><span class="tag">M&A</span><span class="tag">Governança</span>
+      </div>
+      <div class="panel">
+        <strong>Trabalho</strong>
+        <p class="lede">Consultoria preventiva, políticas internas, processos disciplinares e contencioso laboral.</p>
+        <span class="tag">Compliance</span><span class="tag">Políticas internas</span><span class="tag">Litígios</span>
+      </div>
+      <div class="panel">
+        <strong>Fiscal</strong>
+        <p class="lede">Planeamento fiscal, enquadramento de operações e defesa em autos e execuções fiscais.</p>
+        <span class="tag">Planeamento</span><span class="tag">IVA/IRC</span><span class="tag">Defesa fiscal</span>
+      </div>
+      <div class="panel">
+        <strong>Proteção de Dados</strong>
+        <p class="lede">RGPD, DPIA, políticas de privacidade, cookies e formação para equipas.</p>
+        <span class="tag">RGPD</span><span class="tag">DPIA</span><span class="tag">Formação</span>
+      </div>
+      <div class="panel">
+        <strong>Contencioso e Arbitragem</strong>
+        <p class="lede">Representação em tribunais judiciais e arbitrais, com enfoque em soluções rápidas.</p>
+        <span class="tag">Arbitragem</span><span class="tag">Mediação</span><span class="tag">Litígio</span>
+      </div>
+      <div class="panel">
+        <strong>Tecnologia e Startups</strong>
+        <p class="lede">Termos de uso, proteção de software, privacidade e estruturação de rondas de investimento.</p>
+        <span class="tag">Termos & Privacidade</span><span class="tag">Investimento</span><span class="tag">IP</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

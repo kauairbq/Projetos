@@ -1,0 +1,4 @@
+body { font-family: Arial, sans-serif; padding: 20px; background: #f7f9fc; color:#0b1c3f }
+.app-container { max-width:800px; margin:0 auto }
+input { padding:8px; margin-right:8px }
+button { padding:6px 10px }

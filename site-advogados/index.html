@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site para Advogados</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111c2f;
+      --accent: #38bdf8;
+      --accent-2: #a855f7;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: radial-gradient(circle at 20% 20%, rgba(56,189,248,0.12), transparent 25%),
+                  radial-gradient(circle at 80% 10%, rgba(168,85,247,0.12), transparent 25%),
+                  var(--bg);
+      color: var(--text);
+      font-family: "Inter", Arial, sans-serif;
+    }
+    .shell { max-width: 1100px; margin: 0 auto; padding: 28px 20px 48px; }
+    .nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .logo { font-weight: 800; letter-spacing: 0.3px; }
+    .nav a { color: var(--text); text-decoration: none; margin-left: 12px; font-weight: 600; }
+    .hero { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 20px; align-items: center; background: var(--card); padding: 20px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.05); }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); font-size: 12px; font-weight: 700; }
+    h1 { margin: 8px 0; font-size: clamp(30px, 3vw, 42px); }
+    .lede { color: var(--muted); }
+    .cta { display: flex; gap: 10px; margin-top: 14px; }
+    .btn { padding: 10px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.08); color: var(--text); text-decoration: none; font-weight: 700; }
+    .primary { background: linear-gradient(135deg, var(--accent), #3b82f6); color: #0f172a; border: none; }
+    .ghost { background: transparent; }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 14px; }
+    .grid { display: grid; gap: 12px; margin-top: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .footer { margin-top: 28px; color: var(--muted); display: flex; justify-content: space-between; gap: 10px; }
+    @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } .cta { flex-wrap: wrap; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="nav">
+      <div class="logo">Advocacia NovaLex</div>
+      <div>
+        <a href="#atuacao">Atuacao</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Site para Advogados</p>
+        <h1>Capte clientes com uma presenca digital segura.</h1>
+        <p class="lede">Website institucional com areas de atuacao, agendamento online (Calendly) e formul?rios seguros adequados ao GDPR.</p>
+        <div class="cta">
+          <a class="btn primary" href="#contato">Marcar chamada</a>
+          <a class="btn ghost" href="#atuacao">Ver atuacao</a>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Highlights</h3>
+        <p class="lede">SEO tecnico, landing pages, blog juridico, captura de leads e integra?ao com CRM.</p>
+      </div>
+    </section>
+
+    <section id="atuacao" class="grid">
+      <div class="card"><strong>Direito Empresarial</strong><br><span class="lede">Contratos, societ?rio e M&A.</span></div>
+      <div class="card"><strong>Trabalho</strong><br><span class="lede">Consultoria preventiva e contencioso.</span></div>
+      <div class="card"><strong>Fiscal</strong><br><span class="lede">Planeamento e lit?gios.</span></div>
+      <div class="card"><strong>Prote??o de Dados</strong><br><span class="lede">Adequa??o GDPR e DPIA.</span></div>
+    </section>
+
+    <section id="contato" class="card" style="margin-top:18px;">
+      <h3>Fale com a equipa</h3>
+      <p class="lede">Responderemos em 1 dia ?til.</p>
+      <a class="btn primary" href="#">Agendar via Calendly</a>
+    </section>
+
+    <div class="footer">
+      <div>? 2025 NovaLex</div>
+      <div>Privacidade ? Termos</div>
+    </div>
+  </div>
+</body>
+</html>

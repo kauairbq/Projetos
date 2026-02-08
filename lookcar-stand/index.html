@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stand Automoveis | LookCar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="topbar">
+    <div class="nav-left">
+      <button class="hamburger" aria-label="Abrir menu" id="openMenu">
+        <svg width="24" height="24" viewBox="0 0 26 26" aria-hidden="true">
+          <path d="M4.3 21.4a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zm10.7 0a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zm10.7 0a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zM4.3 10.7a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zm10.7 0a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zm10.7 0a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6zM4.3 0a2.3 2.3 0 1 1 0 4.6A2.3 2.3 0 0 1 4.3 0zm10.7 0a2.3 2.3 0 1 1 0 4.6A2.3 2.3 0 0 1 15 0zm10.7 0a2.3 2.3 0 1 1 0 4.6 2.3 2.3 0 0 1 0-4.6z" fill="currentColor"/>
+        </svg>
+      </button>
+      <div class="brand">
+        <span class="logo-mark">SA</span>
+        <div>
+          <strong>Stand Automoveis</strong>
+          <small>Carmine D-Services</small>
+        </div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#topo">Início</a>
+      <a href="#stock">Viaturas</a>
+      <a href="#destaques">Serviços</a>
+      <a href="#stock">Pesquisar</a>
+      <a href="#empresa">Empresa</a>
+      <a href="#contacto">Contactos</a>
+    </div>
+    <div class="nav-cta">
+      <a class="btn btn-primary" href="#contacto">Fale agora connosco</a>
+    </div>
+  </nav>
+
+  <div class="overlay-menu" id="overlayMenu" aria-hidden="true">
+    <div class="overlay-box">
+      <button class="close-overlay" id="closeMenu">Fechar</button>
+      <nav class="overlay-links">
+        <a href="#topo" class="overlay-link">Início</a>
+        <a href="#stock" class="overlay-link">Viaturas</a>
+        <a href="#destaques" class="overlay-link">Serviços</a>
+        <a href="#stock" class="overlay-link">Pesquisar</a>
+        <a href="#empresa" class="overlay-link">Empresa</a>
+        <a href="#contacto" class="overlay-link">Contactos</a>
+      </nav>
+      <div class="overlay-section">
+        <h4>Fale agora connosco</h4>
+        <div class="overlay-actions">
+          <a class="pill" href="mailto:kauai_lucas@hotmail.com">Email</a>
+          <a class="pill" href="tel:+351961150993">Nós Ligamos</a>
+          <a class="pill" href="https://wa.me/351961150993" target="_blank" rel="noreferrer">Whatsapp</a>
+          <a class="pill" href="#" aria-label="Messenger">Messenger</a>
+        </div>
+      </div>
+      <div class="overlay-section">
+        <h4>Siga as nossas novidades</h4>
+        <div class="overlay-actions">
+          <a class="pill" href="#" aria-label="Facebook">Facebook</a>
+          <a class="pill" href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+      <div class="overlay-footer">
+        <p class="muted">MIGUEL FERREIRA E CARLOS BORGES COMÉRCIO AUTO, LDA | NIF:514981733 | Copyright © 2025</p>
+        <div class="overlay-links-sm">
+          <a href="#">Resolução de Conflitos</a>
+          <a href="#">Politica de Privacidade</a>
+          <a href="#">Livro de reclamações</a>
+        </div>
+        <p class="muted">um original Carmine D-Services</p>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero" id="topo">
+    <div class="hero__badge">Stand Automoveis · Semi-novos e zero km</div>
+    <div class="hero__grid">
+      <div>
+        <h1>Stand Automoveis com transparencia total</h1>
+        <p class="muted">Curadoria de viaturas inspecionadas, financiamento agil e entregas rapidas. Experiencia digital completa + atendimento humano.</p>
+        <div class="hero__ctas">
+          <a class="btn btn-primary" href="#stock">Ver stock</a>
+          <a class="btn btn-ghost" href="#contacto">Pedir proposta</a>
+        </div>
+        <div class="hero__chips">
+          <span>Relatorio tecnico</span>
+          <span>Historico de manutencao</span>
+          <span>Garantia estendida</span>
+        </div>
+      </div>
+      <div class="hero__card">
+        <h3>Procura rapida</h3>
+        <label>Tipo</label>
+        <select id="tipo">
+          <option value="">Todos</option>
+          <option value="SUV">SUV</option>
+          <option value="Citadino">Citadino</option>
+          <option value="Hibrido">Hibrido</option>
+          <option value="Eletrico">Eletrico</option>
+        </select>
+        <label>Orcamento max (EUR)</label>
+        <input id="orcamento" type="number" placeholder="30000" />
+        <button class="btn btn-primary" id="applyFilters">Aplicar filtros</button>
+        <p class="muted small">Fazemos sourcing customizado se nao encontrares o modelo desejado.</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section" id="stock" aria-labelledby="stock-title">
+      <div class="section__head">
+        <p class="kicker">Stock em destaque</p>
+        <h2 id="stock-title">Viaturas inspecionadas</h2>
+        <p class="muted">Quilometragem real, check-point mecanico, garantia e opcao de financiamento.</p>
+      </div>
+      <div class="filters">
+        <input id="search" type="search" placeholder="Procura por marca ou modelo..." />
+        <div class="pill-group" id="tags">
+          <button class="pill active" data-tag="">Todos</button>
+          <button class="pill" data-tag="SUV">SUV</button>
+          <button class="pill" data-tag="Citadino">Citadino</button>
+          <button class="pill" data-tag="Hibrido">Hibrido</button>
+          <button class="pill" data-tag="Eletrico">Eletrico</button>
+        </div>
+      </div>
+      <div class="grid" id="cards"></div>
+    </section>
+
+    <section class="section highlights" aria-labelledby="destaques">
+      <div class="section__head">
+        <p class="kicker">Porque escolher</p>
+        <h2 id="destaques">Processo transparente</h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3>Checklist de 120 pontos</h3>
+          <p class="muted">Motor, travagem, suspensao, eletrica, infotainment. Entregamos relatorio e fotos.</p>
+        </article>
+        <article class="card">
+          <h3>Financiamento agil</h3>
+          <p class="muted">Parcerias com bancos e financeiras. Simulacoes em minutos, sem burocracia.</p>
+        </article>
+        <article class="card">
+          <h3>Entrega e garantia</h3>
+          <p class="muted">Entrega em todo o pais e garantia com rede de oficinas credenciadas.</p>
+        </article>
+        <article class="card">
+          <h3>Oficina propria</h3>
+          <p class="muted">Equipa interna de mecanica e detailing para preparar e manter as viaturas apos a compra.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section banner" aria-labelledby="banner">
+      <div>
+        <p class="kicker">Troca e retoma</p>
+        <h2 id="banner">Avalie o teu carro em 24h</h2>
+        <p class="muted">Mandamos avaliar online e apresentamos proposta justa com opcao de abate de financiamento.</p>
+      </div>
+      <a class="btn btn-primary" href="#contacto">Avaliar agora</a>
+    </section>
+
+    <section class="section testimonials" aria-labelledby="testemunhos">
+      <div class="section__head">
+        <p class="kicker">Clientes</p>
+        <h2 id="testemunhos">Experiencia que converte</h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="card quote">
+          <p>“Comprei online, recebi relatorio completo e o carro chegou impecavel.”</p>
+          <strong>— Ana, Coimbra</strong>
+        </article>
+        <article class="card quote">
+          <p>“Financiamento em 48h e retoma do meu carro antigo. Processo simples.”</p>
+          <strong>— Luis, Porto</strong>
+        </article>
+        <article class="card quote">
+          <p>“Equipa respondeu em minutos e ajustou a busca ao meu orcamento.”</p>
+          <strong>— Sofia, Lisboa</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cta" id="contacto">
+      <div class="cta__box">
+        <div>
+          <p class="kicker">Precisas de ajuda</p>
+          <h2>Fala com um consultor</h2>
+        <p class="muted">Enviamos viaturas recomendadas em menos de 24h.</p>
+      </div>
+      <div class="cta__actions">
+        <a class="btn btn-primary" href="https://wa.me/351961150993" target="_blank" rel="noreferrer">WhatsApp</a>
+        <a class="btn btn-ghost" href="mailto:kauai_lucas@hotmail.com">Enviar email</a>
+      </div>
+    </div>
+    <div class="contact-grid">
+      <div class="card contact-card">
+        <h3>Fale agora connosco</h3>
+        <div class="contact-actions">
+          <a class="pill" href="mailto:kauai_lucas@hotmail.com">Email</a>
+          <a class="pill" href="tel:+351961150993">Nós Ligamos</a>
+          <a class="pill" href="https://wa.me/351961150993" target="_blank" rel="noreferrer">Whatsapp</a>
+          <a class="pill" href="#" aria-label="Messenger">Messenger</a>
+        </div>
+      </div>
+      <div class="card contact-card">
+        <h3>Siga as nossas novidades</h3>
+        <div class="contact-actions">
+          <a class="pill" href="#" aria-label="Facebook">Facebook</a>
+          <a class="pill" href="#" aria-label="Instagram">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <footer class="footer" id="empresa">
+    <div>
+      <strong>Stand Automoveis</strong>
+      <p class="muted">Stock curado, financiamentos e entregas em todo o pais.</p>
+      <p class="muted">MIGUEL FERREIRA E CARLOS BORGES COMÉRCIO AUTO, LDA · NIF:514981733</p>
+      <p class="muted">Copyright © 2025 · um original Carmine D-Services</p>
+    </div>
+    <div class="footer__links">
+      <a href="#stock">Stock</a>
+      <a href="#destaques">Diferenciais</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#">Resolução de Conflitos</a>
+      <a href="#">Politica de Privacidade</a>
+      <a href="#">Livro de reclamações</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

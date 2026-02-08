@@ -1,0 +1,86 @@
+// Prisma schema (Workflow Engine)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum WorkflowStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+}
+
+enum InstanceStatus {
+  RUNNING
+  COMPLETED
+  CANCELLED
+}
+
+model Workflow {
+  id          String            @id @default(uuid())
+  name        String
+  description String?
+  status      WorkflowStatus    @default(DRAFT)
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  versions    WorkflowVersion[]
+  instances   WorkflowInstance[]
+}
+
+model WorkflowVersion {
+  id          String             @id @default(uuid())
+  workflowId  String
+  version     Int
+  definition  Json
+  createdAt   DateTime           @default(now())
+  workflow    Workflow           @relation(fields: [workflowId], references: [id])
+  instances   WorkflowInstance[]
+
+  @@unique([workflowId, version])
+}
+
+model WorkflowInstance {
+  id            String           @id @default(uuid())
+  workflowId    String
+  versionId     String
+  currentState  String
+  status        InstanceStatus   @default(RUNNING)
+  context       Json?
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+  workflow      Workflow         @relation(fields: [workflowId], references: [id])
+  version       WorkflowVersion  @relation(fields: [versionId], references: [id])
+  events        WorkflowEvent[]
+}
+
+model WorkflowEvent {
+  id           String   @id @default(uuid())
+  instanceId   String
+  fromState    String
+  toState      String
+  actor        String?
+  metadata     Json?
+  createdAt    DateTime @default(now())
+  instance     WorkflowInstance @relation(fields: [instanceId], references: [id])
+}
+
+model Rule {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  description String?
+  conditions  Json
+  createdAt   DateTime @default(now())
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  action    String
+  actor     String?
+  payload   Json?
+  createdAt DateTime @default(now())
+}

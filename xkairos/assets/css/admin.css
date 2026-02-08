@@ -1,0 +1,515 @@
+/* Xkairos Tech - Painel Administrativo */
+/* ================================================== */
+
+/* Dashboard Layout */
+.admin-dashboard {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    min-height: 100vh;
+    background: #0A192F;
+}
+
+.admin-sidebar {
+    background: rgba(13, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    border-right: 1px solid rgba(79, 179, 255, 0.2);
+    padding: 2rem 1rem;
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    overflow-y: auto;
+}
+
+.admin-main {
+    margin-left: 250px;
+    padding: 2rem;
+    background: #0A192F;
+}
+
+/* Sidebar */
+.admin-sidebar .logo {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(79, 179, 255, 0.2);
+}
+
+.admin-sidebar .logo h2 {
+    color: #64FFDA;
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.admin-sidebar .logo p {
+    color: #A8B2D1;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.admin-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.admin-nav li {
+    margin-bottom: 0.5rem;
+}
+
+.admin-nav a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    color: #E6F1FF;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.admin-nav a:hover,
+.admin-nav a.active {
+    background: rgba(79, 179, 255, 0.1);
+    border-color: #64FFDA;
+    color: #64FFDA;
+    transform: translateX(5px);
+}
+
+.admin-nav a i {
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+}
+
+/* Dashboard Cards */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.dashboard-card {
+    background: rgba(13, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(79, 179, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(79, 179, 255, 0.4);
+    border-color: #64FFDA;
+}
+
+.dashboard-card .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #E6F1FF;
+}
+
+.dashboard-card .icon.blue {
+    background: linear-gradient(135deg, #64FFDA, #64FFDA);
+}
+
+.dashboard-card .icon.green {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+}
+
+.dashboard-card .icon.orange {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+}
+
+.dashboard-card .icon.red {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.dashboard-card h3 {
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.dashboard-card .value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #64FFDA;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-card .change {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.dashboard-card .change.positive {
+    color: #22c55e;
+}
+
+.dashboard-card .change.negative {
+    color: #ef4444;
+}
+
+/* Tabelas Administrativas */
+.admin-table {
+    background: rgba(13, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(79, 179, 255, 0.2);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+
+.admin-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(79, 179, 255, 0.2);
+}
+
+.admin-table th {
+    background: rgba(79, 179, 255, 0.1);
+    color: #64FFDA;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.admin-table td {
+    color: var(--text-light);
+}
+
+.admin-table tr:hover {
+    background: rgba(79, 179, 255, 0.05);
+}
+
+.admin-table .status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.admin-table .status.active {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+}
+
+.admin-table .status.pending {
+    background: rgba(249, 115, 22, 0.2);
+    color: #f97316;
+}
+
+.admin-table .status.inactive {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+}
+
+.admin-table .actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.admin-table .btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.admin-table .btn-primary {
+    background: var(--primary);
+    color: var(--text-light);
+}
+
+.admin-table .btn-primary:hover {
+    background: #64FFDA;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(79, 179, 255, 0.3);
+}
+
+.admin-table .btn-secondary {
+    background: var(--text-secondary);
+    color: var(--text-light);
+}
+
+.admin-table .btn-secondary:hover {
+    background: var(--text-light);
+    color: var(--darker);
+}
+
+.admin-table .btn-danger {
+    background: #ef4444;
+    color: var(--text-light);
+}
+
+.admin-table .btn-danger:hover {
+    background: #dc2626;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+}
+
+/* Formulários Administrativos */
+.admin-form {
+    background: rgba(13, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(79, 179, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+
+.admin-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.admin-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid rgba(79, 179, 255, 0.3);
+    border-radius: 5px;
+    font-size: 1rem;
+    background: rgba(6, 11, 19, 0.8);
+    color: var(--text-light);
+    transition: border-color 0.3s;
+}
+
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus {
+    outline: none;
+    border-color: #64FFDA;
+    box-shadow: 0 0 0 2px rgba(79, 179, 255, 0.2);
+}
+
+.admin-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.admin-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.admin-form .form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+/* Modal Administrativo */
+.admin-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.admin-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-modal-content {
+    background: var(--darker);
+    border: 1px solid rgba(79, 179, 255, 0.2);
+    border-radius: 15px;
+    padding: 2rem;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.admin-modal h3 {
+    color: #64FFDA;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.admin-modal .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.admin-modal .close:hover {
+    color: #64FFDA;
+}
+
+/* Estatísticas */
+.stats-section {
+    margin-bottom: 2rem;
+}
+
+.stats-charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.stats-chart {
+    background: rgba(13, 26, 46, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(79, 179, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.stats-chart h4 {
+    color: #64FFDA;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Notificações */
+.notifications {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    max-width: 400px;
+}
+
+.notification {
+    background: rgba(13, 26, 46, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(79, 179, 255, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.notification.success {
+    border-color: #22c55e;
+}
+
+.notification.error {
+    border-color: #ef4444;
+}
+
+.notification.warning {
+    border-color: #f97316;
+}
+
+.notification .title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.notification.success .title {
+    color: #22c55e;
+}
+
+.notification.error .title {
+    color: #ef4444;
+}
+
+.notification.warning .title {
+    color: #f97316;
+}
+
+.notification .message {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admin-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar {
+        position: static;
+        height: auto;
+        width: 100%;
+    }
+
+    .admin-main {
+        margin-left: 0;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-form .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-table {
+        font-size: 0.9rem;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .stats-charts {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site para Advogados</title>
+  <base href="./" />
+  <style>
+    :root {
+      --bg: #0b1f34;
+      --panel: #102744;
+      --panel-strong: #16345a;
+      --gold: #d7b86a;
+      --text: #f4f6fb;
+      --muted: #c9d3e7;
+      --border: rgba(255, 255, 255, 0.08);
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(215, 184, 106, 0.12), transparent 35%),
+                  radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.06), transparent 35%),
+                  var(--bg);
+      color: var(--text);
+    }
+    a { color: inherit; text-decoration: none; }
+    .shell { max-width: 1100px; margin: 0 auto; padding: 28px 18px 56px; }
+    .nav {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 14px; margin-bottom: 22px;
+    }
+    .brand { font-weight: 800; letter-spacing: 0.02em; }
+    .links a {
+      margin-left: 12px; font-weight: 700; padding: 9px 12px; border-radius: 10px;
+      border: 1px solid transparent; transition: all 0.15s ease;
+    }
+    .links a:hover { border-color: var(--gold); background: rgba(215, 184, 106, 0.1); }
+    .hero {
+      display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 18px; align-items: stretch;
+      background: linear-gradient(135deg, rgba(16, 39, 68, 0.9), rgba(22, 52, 90, 0.9));
+      border: 1px solid var(--border); border-radius: 18px; padding: 24px; box-shadow: var(--shadow);
+    }
+    .eyebrow { text-transform: uppercase; letter-spacing: 0.18em; color: var(--gold); font-size: 11px; font-weight: 800; }
+    h1 { margin: 10px 0; font-size: 32px; line-height: 1.2; }
+    .lede { color: var(--muted); margin: 0 0 10px; line-height: 1.6; }
+    .cta { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+    .btn {
+      padding: 11px 15px; border-radius: 12px; border: 1px solid var(--gold);
+      color: var(--text); font-weight: 800; letter-spacing: 0.01em;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+      background: transparent;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35); }
+    .primary { background: var(--gold); color: #0c1220; border: none; }
+    .primary:hover { background: #e4c880; }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    .panel.alt { background: var(--panel-strong); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .grid .panel strong { display: block; margin-bottom: 6px; }
+    .footer {
+      margin-top: 26px; color: var(--muted);
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
+    }
+    .footer a { color: var(--gold); font-weight: 700; }
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; }
+      .nav { flex-direction: column; align-items: flex-start; }
+      .links a { margin-left: 0; margin-right: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="nav">
+      <div class="brand">Advocacia Prime</div>
+      <div class="links">
+        <a href="/index.html">&larr; Voltar ao portfólio</a>
+        <a href="areas-de-atuacao.html">Áreas</a>
+        <a href="areas-de-atuacao.html">Áreas (detalhado)</a>
+        <a href="agendar-consultas.html">Agendar</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Site para Advogados</p>
+        <h1>Presença digital que inspira confiança.</h1>
+        <p class="lede">Website institucional com áreas de atuação claras, agendamento online e formulários seguros em conformidade com o RGPD.</p>
+        <div class="cta">
+          <a class="btn primary" href="agendar-consultas.html">Agendar consulta</a>
+          <a class="btn" href="areas-de-atuacao.html">Ver áreas detalhadas</a>
+        </div>
+      </div>
+      <div class="panel alt">
+        <strong>Áreas em destaque</strong>
+        <p class="lede">Empresarial / Fiscal / Trabalho / Proteção de Dados</p>
+        <strong>Agendamento</strong>
+        <p class="lede">Integração Calendly/CRM · Confirmação automática</p>
+        <strong>Compliance</strong>
+        <p class="lede">RGPD, políticas de privacidade e cookies ajustadas ao setor legal.</p>
+      </div>
+    </section>
+
+    <section id="atuacao" class="grid">
+      <div class="panel"><strong>Empresarial</strong><span class="lede">Contratos, societário e M&A.</span></div>
+      <div class="panel"><strong>Trabalho</strong><span class="lede">Consultoria preventiva e contencioso.</span></div>
+      <div class="panel"><strong>Fiscal</strong><span class="lede">Planeamento e litígios.</span></div>
+      <div class="panel"><strong>Proteção de Dados</strong><span class="lede">RGPD, DPIA e políticas.</span></div>
+    </section>
+
+    <section id="contacto" class="panel" style="margin-top:18px;">
+      <h3>Fale com a equipa</h3>
+      <p class="lede">Responderemos em 1 dia útil.</p>
+      <div class="cta">
+        <a class="btn primary" href="https://calendly.com/agenda-consulta" target="_blank" rel="noopener">Agendar via Calendly</a>
+        <a class="btn" href="mailto:contacto@advocacia-prime.pt">contacto@advocacia-prime.pt</a>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>&copy; 2025 Advocacia Prime</div>
+      <div><a href="#contacto">Privacidade</a> · <a href="#contacto">Termos</a></div>
+    </div>
+  </div>
+</body>
+</html>

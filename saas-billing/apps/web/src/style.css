@@ -1,0 +1,80 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-slate-50 text-slate-900 antialiased;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.app-shell {
+  @apply min-h-screen bg-slate-50;
+}
+
+.sidebar {
+  @apply hidden md:flex md:w-64 md:flex-col md:gap-2 md:border-r md:border-slate-200 md:bg-white md:px-4 md:py-6;
+}
+
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white p-6 shadow-sm;
+}
+
+.badge {
+  @apply inline-flex items-center rounded-full border border-slate-200 bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-600;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-700;
+}
+
+.btn-secondary {
+  @apply border border-slate-200 bg-white text-slate-700 hover:bg-slate-50;
+}
+
+.btn-ghost {
+  @apply text-slate-500 hover:text-slate-900;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm text-slate-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-200;
+}
+
+.table {
+  @apply w-full border-separate border-spacing-y-2;
+}
+
+.table th {
+  @apply px-4 pb-2 text-left text-xs font-semibold uppercase tracking-wide text-slate-400;
+}
+
+.table td {
+  @apply rounded-xl bg-white px-4 py-3 text-sm text-slate-700 shadow-sm;
+}
+
+.status-pill {
+  @apply inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold;
+}
+
+.status-active {
+  @apply bg-emerald-100 text-emerald-700;
+}
+
+.status-trial {
+  @apply bg-blue-100 text-blue-700;
+}
+
+.status-canceled {
+  @apply bg-rose-100 text-rose-700;
+}
+
+.status-pastdue {
+  @apply bg-amber-100 text-amber-700;
+}

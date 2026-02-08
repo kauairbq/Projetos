@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portefolio Personal Trainer | Prototipo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__tag">Personal Trainer · Treino e Nutrição</div>
+    <h1>Resultados reais com planos feitos para ti</h1>
+    <p class="hero__subtitle">
+      Treinos personalizados, orientação alimentar prática e acompanhamento contínuo para ganho de força,
+      definição e saúde sustentável.
+    </p>
+    <div class="hero__ctas">
+      <a class="btn btn-primary" href="https://wa.me/351961150993" target="_blank" rel="noreferrer">Marcar avaliação</a>
+      <a class="btn btn-ghost" href="#contacto">Falar agora</a>
+    </div>
+    <div class="hero__chips">
+      <span>Planos 100% personalizados</span>
+      <span>Suporte online</span>
+      <span>Protocolos de mobilidade</span>
+      <span>Nutrição prática</span>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="section cards" aria-labelledby="servicos">
+      <div class="section__head">
+        <p class="kicker">Serviços</p>
+        <h2 id="servicos">Planos para cada objetivo</h2>
+        <p class="muted">Treino, alimentação e suporte alinhados ao teu nível, tempo e equipamento.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Treino Personalizado</h3>
+          <p>Planos semanais com progressão, vídeos de execução e ajustes constantes.</p>
+          <ul>
+            <li>Divisão adaptada (full, upper/lower, push/pull/legs).</li>
+            <li>Correção de técnica e prevenção de lesões.</li>
+            <li>Ajuste a ginásio ou treino em casa.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Nutrição Prática</h3>
+          <p>Guias simples de refeições com macro-alvo e substituições fáceis.</p>
+          <ul>
+            <li>Planos orientativos (bulking, cutting ou manutenção).</li>
+            <li>Listas de compras e refeições rápidas.</li>
+            <li>Check-ins semanais para ajustes.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Performance & Mobilidade</h3>
+          <p>Protocolos para força, estabilidade e prevenção de dor.</p>
+          <ul>
+            <li>Rotinas pré/pos treino de mobilidade.</li>
+            <li>Foco em core, escápulas e glúteo para base sólida.</li>
+            <li>Testes simples de progresso.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tips" aria-labelledby="dicas">
+      <div>
+        <p class="kicker">Dicas rápidas</p>
+        <h2 id="dicas">Alimentação e treino sem complicar</h2>
+        <p class="muted">Pontos práticos para aplicar hoje.</p>
+        <div class="chips">
+          <span>Prato: 1/2 legumes, 1/4 proteína, 1/4 hidratos</span>
+          <span>Proteína em cada refeição</span>
+          <span>Hidratação: 35 ml/kg</span>
+          <span>8-10k passos/dia</span>
+          <span>Alongar 5-8 min pós-treino</span>
+        </div>
+      </div>
+      <div class="tips__list" id="tipList">
+        <!-- preenchido via JS -->
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="exercicios">
+      <div class="section__head">
+        <p class="kicker">Biblioteca</p>
+        <h2 id="exercicios">Execução certa importa</h2>
+        <p class="muted">Foca em amplitude, controlo e respiração.</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card exercise">
+          <div class="icon">🏋️</div>
+          <h3>Agachamento</h3>
+          <p>Coluna neutra, joelhos acompanham a ponta do pé, controla a descida.</p>
+          <small class="muted">Erro comum: deixar calcanhares subir ou colapsar joelhos para dentro.</small>
+        </article>
+        <article class="card exercise">
+          <div class="icon">🧘</div>
+          <h3>Prancha</h3>
+          <p>Ativa core e glúteo, mantém alinhamento cabeça-coluna-pelve.</p>
+          <small class="muted">Erro comum: deixar lombar ceder ou elevar a anca.</small>
+        </article>
+        <article class="card exercise">
+          <div class="icon">💪</div>
+          <h3>Remada</h3>
+          <p>Escápulas para trás e para baixo, puxa com cotovelos junto ao tronco.</p>
+          <small class="muted">Erro comum: encolher ombros ou usar balanço excessivo.</small>
+        </article>
+        <article class="card exercise">
+          <div class="icon">🏃</div>
+          <h3>Cardio Intervalado</h3>
+          <p>4-8 blocos de esforço/recuperação; progressão semanal de volume ou intensidade.</p>
+          <small class="muted">Erro comum: ritmo demasiado alto sem base aeróbia.</small>
+        </article>
+      </div>
+    </section>
+
+    <section class="section calculators" aria-labelledby="calculadoras">
+      <div class="section__head">
+        <p class="kicker">Ferramentas</p>
+        <h2 id="calculadoras">Calculadoras rápidas</h2>
+        <p class="muted">Plano detalhado com TMB, TDEE, macros, IMC, água e refeições sugeridas.</p>
+      </div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Plano detalhado (TMB + atividade)</h3>
+          <div class="grid-2">
+            <div>
+              <label>Sexo</label>
+              <select id="sexoDet">
+                <option value="m">Masculino</option>
+                <option value="f">Feminino</option>
+              </select>
+            </div>
+            <div>
+              <label>Idade</label>
+              <input type="number" id="idadeDet" placeholder="30" />
+            </div>
+          </div>
+          <div class="grid-2">
+            <div>
+              <label>Peso (kg)</label>
+              <input type="number" id="pesoDet" placeholder="77" />
+            </div>
+            <div>
+              <label>Altura (cm)</label>
+              <input type="number" id="alturaDet" placeholder="184" />
+            </div>
+          </div>
+          <label>Atividade</label>
+          <select id="atividadeDet">
+            <option value="1.2">Sedentário</option>
+            <option value="1.375">Leve (1-3x/sem)</option>
+            <option value="1.55">Moderado (3-5x/sem)</option>
+            <option value="1.725">Intenso (6-7x/sem)</option>
+            <option value="1.9">Muito intenso (2x/dia)</option>
+          </select>
+          <label>Objetivo</label>
+          <select id="objetivoDet">
+            <option value="manutencao">Manutenção</option>
+            <option value="cutting">Perder gordura (-400 kcal)</option>
+            <option value="bulking">Ganhar massa (+250 kcal)</option>
+          </select>
+          <button class="btn btn-primary" id="calcDet" style="margin-top: 10px;">Calcular plano</button>
+        </div>
+        <div class="card">
+          <h3>Resultado</h3>
+          <div id="detOut" class="muted">Preenche os dados e calcula para ver o plano.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" aria-labelledby="testemunhos">
+      <div class="section__head">
+        <p class="kicker">Resultados</p>
+        <h2 id="testemunhos">Histórias reais</h2>
+      </div>
+      <div class="grid">
+        <article class="card quote">
+          <p>“Em 6 meses perdi 9 kg e ganhei força no agachamento. O plano foi adaptado ao meu horário apertado.”</p>
+          <strong>— Joana, 32</strong>
+        </article>
+        <article class="card quote">
+          <p>“Voltei a treinar sem dores de ombro. Mobilidade e técnica fizeram toda a diferença.”</p>
+          <strong>— Ricardo, 38</strong>
+        </article>
+        <article class="card quote">
+          <p>“A nutrição foi simples de seguir. Aprendi a montar o prato sem ficar preso a contagens rígidas.”</p>
+          <strong>— Sofia, 29</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="faq">
+      <div class="section__head">
+        <p class="kicker">FAQ</p>
+        <h2 id="faq">Perguntas frequentes</h2>
+      </div>
+      <div class="faq__list">
+        <details open>
+          <summary>O plano é presencial ou online</summary>
+          <p>Online com check-ins semanais; presencial pode ser combinado em Viteu.</p>
+        </details>
+        <details>
+          <summary>Preciso de ginásio</summary>
+          <p>Não obrigatoriamente. Adapto a casa, parque ou ginásio, consoante o teu contexto.</p>
+        </details>
+        <details>
+          <summary>Com que frequência ajustamos o plano</summary>
+          <p>Revisão semanal de treino/nutrição; ajustes adicionais se necessário.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="section cta" id="contacto">
+      <div class="cta__box">
+        <div>
+          <p class="kicker">Pronto para começar</p>
+          <h2>Bora desenhar o teu plano</h2>
+          <p class="muted">Envio um questionário rápido e marcamos avaliação inicial.</p>
+        </div>
+        <a class="btn btn-primary" href="https://wa.me/351961150993" target="_blank" rel="noreferrer">Falar no WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Personal Trainer · Prototipo</strong>
+      <p class="muted">Treino, nutrição e acompanhamento para resultados sustentáveis.</p>
+      <div class="social" aria-label="Redes sociais">
+        <a class="social-x" href="#" title="X (Twitter)" aria-label="X (Twitter)">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 3h4l5 6.5L17 3h4l-6.5 9L21 21h-4l-5-6.5L7 21H3l6.5-9z"/>
+          </svg>
+        </a>
+        <a class="social-ig" href="#" title="Instagram" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3h10a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V7a4 4 0 0 1 4-4zm0 2a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H7zm5 2.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm5.25-3.25a1 1 0 1 1-1 1 1 1 0 0 1 1-1z"/>
+          </svg>
+        </a>
+        <a class="social-fb" href="#" title="Facebook" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M13 10h2.5l.5-3H13V5.5C13 4.7 13.3 4 14.6 4H16V1.2C15.3 1.1 14.1 1 13 1c-3 0-4.9 1.8-4.9 5v1H6v3h2.1v9H13z"/>
+          </svg>
+        </a>
+        <a class="social-tt" href="#" title="TikTok" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M14 3.5c.6 1.6 1.9 3 3.7 3.2v2.5a6.3 6.3 0 0 1-3.8-1.3v6.1a4.9 4.9 0 1 1-4.9-5c.5 0 1 .1 1.5.2v2.5a2.5 2.5 0 1 0 1.9 2.4V3.5z"/>
+          </svg>
+        </a>
+        <a class="social-th" href="#" title="Threads" aria-label="Threads">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12.1 3c3.6 0 6.5 2 7.1 6.2l-2.2.3c-.4-2.7-2.1-4.2-4.9-4.2-3.2 0-5.5 2.2-5.5 5.7 0 3.4 2.1 5.7 5.4 5.7 2 0 3.4-.9 4.2-2.6l-2-.9c-.4.7-1 1.1-1.9 1.1-1.5 0-2.5-1-2.7-2.6h7.5c.1-.4.1-.8.1-1.2 0-4.2-2.6-7.5-7.2-7.5-4.2 0-7.4 3.2-7.4 7.5 0 4.4 3.1 7.4 7.4 7.4 3.7 0 6.5-2 7.3-5.2l2.2.4c-.9 4.2-4.4 7-9.5 7-5.4 0-9.7-3.9-9.7-9.6C4 6.8 7.7 3 12.1 3z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer__links">
+      <a href="#servicos">Serviços</a>
+      <a href="#dicas">Dicas</a>
+      <a href="#calculadoras">Calculadoras</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

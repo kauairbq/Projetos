@@ -1,0 +1,168 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider   = "prisma-client-js"
+  output     = "../node_modules/.prisma/client"
+  engineType = "library"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum SystemRole {
+  USER
+  ADMIN
+}
+
+enum OrganizationRole {
+  OWNER
+  ADMIN
+  MEMBER
+}
+
+enum BillingInterval {
+  MONTHLY
+  YEARLY
+}
+
+enum SubscriptionStatus {
+  TRIALING
+  ACTIVE
+  PAST_DUE
+  SUSPENDED
+  CANCELED
+}
+
+enum InvoiceStatus {
+  DRAFT
+  OPEN
+  PAID
+  VOID
+  OVERDUE
+}
+
+enum PaymentStatus {
+  PENDING
+  SUCCEEDED
+  FAILED
+  REFUNDED
+}
+
+model User {
+  id            String             @id @default(uuid())
+  email         String             @unique
+  name          String?
+  passwordHash  String
+  role          SystemRole         @default(USER)
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+  memberships   OrganizationUser[]
+  refreshTokens RefreshToken[]
+  auditLogs     AuditLog[]          @relation("AuditActor")
+}
+
+model Organization {
+  id            String             @id @default(uuid())
+  name          String
+  slug          String             @unique
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+  members       OrganizationUser[]
+  subscriptions Subscription[]
+  invoices      Invoice[]
+  auditLogs     AuditLog[]
+}
+
+model OrganizationUser {
+  id              String            @id @default(uuid())
+  userId          String
+  organizationId  String
+  role            OrganizationRole  @default(MEMBER)
+  createdAt       DateTime          @default(now())
+  user            User              @relation(fields: [userId], references: [id])
+  organization    Organization       @relation(fields: [organizationId], references: [id])
+
+  @@unique([userId, organizationId])
+}
+
+model Plan {
+  id              String           @id @default(uuid())
+  name            String
+  description     String?
+  priceCents      Int
+  interval        BillingInterval
+  active          Boolean          @default(true)
+  maxUsers        Int              @default(1)
+  canExport       Boolean          @default(false)
+  advancedReports Boolean          @default(false)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  subscriptions   Subscription[]
+}
+
+model Subscription {
+  id               String              @id @default(uuid())
+  organizationId   String
+  planId           String
+  status           SubscriptionStatus  @default(ACTIVE)
+  startDate        DateTime            @default(now())
+  trialEndsAt      DateTime?
+  currentPeriodEnd DateTime?
+  endDate          DateTime?
+  cancelAt         DateTime?
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+  organization     Organization        @relation(fields: [organizationId], references: [id])
+  plan             Plan                @relation(fields: [planId], references: [id])
+  invoices         Invoice[]
+}
+
+model Invoice {
+  id               String        @id @default(uuid())
+  organizationId   String
+  subscriptionId   String
+  amountCents      Int
+  currency         String        @default("EUR")
+  status           InvoiceStatus @default(OPEN)
+  issuedAt         DateTime      @default(now())
+  dueAt            DateTime?
+  paidAt           DateTime?
+  organization     Organization  @relation(fields: [organizationId], references: [id])
+  subscription     Subscription  @relation(fields: [subscriptionId], references: [id])
+  payments         Payment[]
+}
+
+model Payment {
+  id            String        @id @default(uuid())
+  invoiceId     String
+  amountCents   Int
+  currency      String        @default("EUR")
+  status        PaymentStatus @default(PENDING)
+  provider      String        @default("manual")
+  externalRef   String?
+  createdAt     DateTime      @default(now())
+  invoice       Invoice       @relation(fields: [invoiceId], references: [id])
+}
+
+model AuditLog {
+  id              String        @id @default(uuid())
+  organizationId  String
+  actorUserId     String?
+  action          String
+  metadata        Json?
+  createdAt       DateTime      @default(now())
+  organization    Organization  @relation(fields: [organizationId], references: [id])
+  actor           User?          @relation("AuditActor", fields: [actorUserId], references: [id])
+}
+
+model RefreshToken {
+  id        String   @id @default(uuid())
+  userId    String
+  tokenHash String
+  expiresAt DateTime
+  revokedAt DateTime?
+  createdAt DateTime @default(now())
+  user      User     @relation(fields: [userId], references: [id])
+}
