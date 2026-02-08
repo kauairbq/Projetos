@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Cliques</title>
+    <link rel="stylesheet" href="css/contador_style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contador de Cliques</h1>
+        <div id="counterBox" class="counter-box">
+            <span id="valor">0</span>
+        </div>
+        <div class="buttons">
+            <button onclick="incrementar()">+</button>
+            <button onclick="decrementar()">-</button>
+            <button onclick="repor()">Repor</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
