@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Pessoal</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(106, 160, 255, 0.18), transparent 32%),
+        radial-gradient(circle at 80% 0%, rgba(10, 28, 56, 0.6), transparent 40%),
+        #0c1224;
+      color: #e9edf7;
+    }
+    .shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .logo {
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 0.4px;
+    }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #e9edf7;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+    .back:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 36px rgba(0,0,0,0.45);
+      background: rgba(255,255,255,0.1);
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(32, 94, 215, 0.75), rgba(18, 36, 72, 0.95));
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+      margin-bottom: 22px;
+    }
+    .hero h1 {
+      margin: 0 0 10px 0;
+      font-size: 26px;
+      letter-spacing: 0.5px;
+    }
+    .hero p {
+      margin: 0;
+      color: #d7e2ff;
+      max-width: 720px;
+      line-height: 1.5;
+    }
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .post {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: 16px;
+      border-radius: 14px;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.28);
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .post:hover {
+      transform: translateY(-3px);
+      border-color: rgba(92, 153, 255, 0.6);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.35);
+    }
+    .post h2 {
+      margin: 0 0 6px 0;
+      font-size: 18px;
+    }
+    .post p {
+      margin: 0 0 10px 0;
+      color: #c9d3eb;
+      line-height: 1.5;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: #9fb2d4;
+      font-size: 13px;
+    }
+    .pill {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(93, 151, 255, 0.15);
+      border: 1px solid rgba(93, 151, 255, 0.35);
+      color: #d7e6ff;
+      font-size: 12px;
+      letter-spacing: 0.2px;
+    }
+    .footer {
+      margin-top: 22px;
+      color: #94a3b8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 12px;
+    }
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 22px; }
+      .nav { flex-direction: column; align-items: flex-start; gap: 10px; }
+      .back { width: fit-content; }
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="nav">
+      <div class="logo">Blog Pessoal</div>
+      <a class="back" href="/index.html">&#8592; Voltar ao portfólio</a>
+    </div>
+
+    <section class="hero">
+      <h1>Artigos sobre produto digital, conteúdo e SEO</h1>
+      <p>Pequenas notas sobre como criar experiências de conteúdo rápidas, bem posicionadas e fáceis de manter — do CMS ao front-end.</p>
+    </section>
+
+    <section class="posts">
+      <article class="post">
+        <h2>Integração com redes sociais</h2>
+        <p>Estratégia de partilha, metadata Open Graph/Twitter Cards e botões de partilha nativos para maximizar alcance orgânico.</p>
+        <div class="meta">
+          <span class="pill">SEO</span>
+          <span class="pill">Open Graph</span>
+          <span>3 min</span>
+        </div>
+      </article>
+
+      <article class="post">
+        <h2>Painel de administração</h2>
+        <p>Workflow de publicação, agendamento e moderação de comentários com revisões rápidas e histórico de alterações.</p>
+        <div class="meta">
+          <span class="pill">CMS</span>
+          <span class="pill">Workflow</span>
+          <span>5 min</span>
+        </div>
+      </article>
+
+      <article class="post">
+        <h2>Performance no mobile</h2>
+        <p>Lazy-load de imagens, fontes otimizadas e prefetch inteligente para manter a experiência fluida em redes lentas.</p>
+        <div class="meta">
+          <span class="pill">Performance</span>
+          <span class="pill">Mobile</span>
+          <span>4 min</span>
+        </div>
+      </article>
+    </section>
+
+    <div class="footer">
+      <span>WordPress / PHP / MySQL / JS</span>
+      <span>© 2025</span>
+    </div>
+  </div>
+</body>
+</html>
