@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API REST para Gest?o - Swagger</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui.css" />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #0f172a;
+      --card: #111c2f;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(56,189,248,0.12), transparent 22%),
+                  radial-gradient(circle at 80% 10%, rgba(168,85,247,0.12), transparent 22%),
+                  var(--bg);
+      color: var(--text);
+      font-family: "Inter", Arial, sans-serif;
+    }
+    .shell { max-width: 1200px; margin: 0 auto; padding: 24px 16px 48px; }
+    .hero {
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 14px;
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .hero h1 { margin: 0; font-size: 20px; }
+    .hero p { margin: 4px 0 0; color: var(--muted); }
+    .hero-actions { display: flex; gap: 10px; align-items: center; }
+    .back {
+      text-decoration: none;
+      color: var(--text);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: transform 0.15s ease, background 0.2s ease;
+    }
+    .back:hover { transform: translateY(-1px); background: rgba(255,255,255,0.1); }
+    .tag {
+      background: rgba(56,189,248,0.18);
+      border: 1px solid rgba(56,189,248,0.3);
+      padding: 6px 10px;
+      border-radius: 10px;
+      color: var(--text);
+      font-weight: 700;
+      font-size: 13px;
+    }
+    #swagger-ui {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 16px;
+    }
+    .swagger-ui, .swagger-ui * { color: var(--text); }
+    .swagger-ui .topbar { display: none; }
+    .swagger-ui .scheme-container { background: transparent; border: none; }
+    .swagger-ui .info { margin-bottom: 10px; color: var(--text); }
+    .swagger-ui .markdown p { color: var(--muted); }
+    .swagger-ui .info .title, .swagger-ui .info .base-url { color: var(--text); }
+    .swagger-ui .servers-title { color: var(--text); }
+    .swagger-ui .servers select, .swagger-ui .servers input, .swagger-ui select {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .swagger-ui .opblock-tag, .swagger-ui .opblock-summary-description,
+    .swagger-ui .opblock-summary-path, .swagger-ui .opblock-section-header h4 {
+      color: var(--text);
+    }
+    .swagger-ui .opblock-tag-section, .swagger-ui .opblock-summary { border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="hero">
+      <div>
+        <h1>API REST para Gestão</h1>
+        <p>Swagger UI · JWT Bearer · /users · /auth/login · /health</p>
+      </div>
+      <div class="hero-actions">
+        <a class="back" href="/index.html">← Voltar</a>
+        <div class="tag">v1.0.0</div>
+      </div>
+    </div>
+    <div id="swagger-ui"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swagger-ui-dist@5/swagger-ui-bundle.js"></script>
+  <script>
+    SwaggerUIBundle({ url: 'swagger.json', dom_id: '#swagger-ui' });
+  </script>
+</body>
+</html>
