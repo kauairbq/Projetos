@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Oficial - Rock Band</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Saltar para o conte??do</a>
+    <header>
+        <nav role="navigation" aria-label="Main Navigation">
+            <div class="logo">
+                <span class="logo-text">Rock Band</span>
+            </div>
+            <ul>
+                <li><a href="index.html">In??cio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="albuns.html">??lbuns</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="loja.html" aria-current="page">Loja</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+                <li><a href="../../../index.html" target="_blank" rel="noopener noreferrer">Portf??lio</a></li>
+            </ul>
+            <button id="dark-mode-toggle" aria-label="Alternar modo escuro">????</button>
+        </nav>
+    </header>
+
+    <main id="main" class="loja-wrap">
+        <section class="loja-card">
+            <div class="loja-header">
+                <div>
+                    <p class="eyebrow">Loja oficial ??? AJAX + JSON</p>
+                    <h1>Loja da Banda</h1>
+                    <p class="lead">Filtra produtos por categoria, v?? detalhes em lightbox e calcula o total em segundos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="loja-card">
+            <div class="loja-header">
+                <h2>Filtrar por categoria</h2>
+                <span class="badge" id="contador">0 itens</span>
+            </div>
+            <div class="filtros">
+                <select id="filtro-categorias">
+                    <option value="">Todas as categorias</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="loja-card">
+            <div class="loja-header">
+                <h2>Produtos</h2>
+            </div>
+            <div id="produtos" class="grade-produtos"></div>
+        </section>
+
+        <section class="loja-card">
+            <div class="loja-header">
+                <h2>Calcular valor total</h2>
+            </div>
+            <form id="form-total" class="form-total">
+                <label>
+                    Produto
+                    <select id="produto-select">
+                        <option value="">Seleciona um produto</option>
+                    </select>
+                </label>
+                <label>
+                    Quantidade
+                    <input type="number" id="quantidade" min="1" value="1">
+                </label>
+                <div class="full">
+                    <button type="submit" class="btn-primary">Calcular</button>
+                </div>
+            </form>
+            <div id="total" class="total">Valor total: ???</div>
+            <div id="mensagem" class="mensagem info">Escolhe um produto e quantidade.</div>
+        </section>
+    </main>
+
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <div class="lightbox-conteudo">
+            <button class="fechar" aria-label="Fechar">??</button>
+            <img id="lb-imagem" src="" alt="">
+            <div class="lb-texto">
+                <h3 id="lb-titulo"></h3>
+                <p id="lb-descricao"></p>
+                <p id="lb-preco"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/darkmode.js" defer></script>
+    <script src="js/shop.js" defer></script>
+</body>
+</html>
+

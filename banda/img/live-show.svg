@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title id="title">Concerto ao vivo</title>
+  <desc id="desc">Palco com luzes e público.</desc>
+  <defs>
+    <linearGradient id="stage" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1C3F"/>
+      <stop offset="100%" stop-color="#1E4DB7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#stage)"/>
+  <rect x="100" y="260" width="600" height="120" rx="18" fill="rgba(0,0,0,0.35)"/>
+  <circle cx="160" cy="120" r="70" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="640" cy="90" r="90" fill="rgba(74,144,226,0.16)"/>
+  <path d="M140 250 L180 170 L220 250" stroke="#4A90E2" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <path d="M280 260 L320 180 L360 260" stroke="#FACC15" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <path d="M440 255 L480 190 L520 255" stroke="#FF6B6B" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <path d="M600 245 L640 185 L680 245" stroke="#4ADE80" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <rect x="140" y="320" width="520" height="60" rx="12" fill="rgba(255,255,255,0.06)"/>
+  <text x="160" y="360" fill="#e8edf5" font-family="Roboto, Arial, sans-serif" font-size="32" font-weight="700">Tour 2025</text>
+</svg>

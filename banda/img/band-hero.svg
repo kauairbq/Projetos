@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="title desc">
+  <title id="title">Rock Band Hero</title>
+  <desc id="desc">Ilustração abstrata com luzes e palco.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1C3F"/>
+      <stop offset="100%" stop-color="#1E4DB7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <circle cx="200" cy="150" r="120" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="950" cy="120" r="160" fill="rgba(74,144,226,0.15)"/>
+  <rect x="150" y="320" width="900" height="200" fill="rgba(0,0,0,0.25)" rx="30"/>
+  <rect x="220" y="260" width="140" height="220" fill="#141f38" rx="18"/>
+  <rect x="430" y="240" width="160" height="240" fill="#102b4f" rx="18"/>
+  <rect x="650" y="270" width="140" height="210" fill="#1a3d72" rx="18"/>
+  <rect x="850" y="250" width="120" height="230" fill="#12325c" rx="18"/>
+  <path d="M320 260 L360 220 L400 260" stroke="#4A90E2" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <path d="M520 230 L560 180 L600 230" stroke="#FF6B6B" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <path d="M720 250 L760 210 L800 250" stroke="#FACC15" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <text x="80" y="540" fill="#e8edf5" font-family="Roboto, Arial, sans-serif" font-size="48" font-weight="700">ROCK BAND</text>
+  <text x="80" y="580" fill="#9fb0c9" font-family="Roboto, Arial, sans-serif" font-size="24">Música que Move</text>
+</svg>

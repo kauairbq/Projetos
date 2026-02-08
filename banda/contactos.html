@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Rock Band</title>
+    <meta name="description" content="Entre em contato com a Rock Band. Agende shows, envie mensagens ou tire suas d??vidas. Estamos aqui para conversar!">
+    <meta property="og:title" content="Contato - Rock Band">
+    <meta property="og:description" content="Entre em contato com a Rock Band. Agende shows, envie mensagens ou tire suas d??vidas. Estamos aqui para conversar!">
+    <meta property="og:image" content="img/contact-bg.svg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conte??do</a>
+
+    <header>
+        <nav role="navigation" aria-label="Main Navigation">
+            <div class="logo">
+                <span class="logo-text">Rock Band</span>
+            </div>
+            <ul>
+                <li><a href="index.html">In??cio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="albuns.html">??lbuns</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="contactos.html" aria-current="page">Contato</a></li>
+                <li><a href="../../index.html">Portf??lio</a></li>
+            </ul>
+            <button id="dark-mode-toggle" aria-label="Alternar modo escuro">????</button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero-contact" class="hero" role="banner" aria-labelledby="hero-contact-title">
+            <div class="hero-content">
+                <h1 id="hero-contact-title">Entre em Contato</h1>
+                <p>Fale conosco e vamos fazer m??sica juntos</p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section py-5" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="text-center mb-5">Vamos Conversar!</h2>
+                <div class="row">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <div class="contact-info">
+                            <h3 class="mb-4">Informa????es de Contato</h3>
+                            <p class="mb-4">Estamos sempre abertos a novas oportunidades, colabora????es e conex??es. Entre em contato conosco!</p>
+
+                            <div class="contact-details mb-4">
+                                <div class="contact-item mb-3">
+                                    <i class="fas fa-envelope text-primary me-3"></i>
+                                    <div>
+                                        <strong>Email:</strong><br>
+                                        <a href="mailto:contato@rockband.pt">contato@rockband.pt</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item mb-3">
+                                    <i class="fas fa-phone text-primary me-3"></i>
+                                    <div>
+                                        <strong>Telefone:</strong><br>
+                                        <a href="tel:+351912345678">+351 912 345 678</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item mb-3">
+                                    <i class="fas fa-map-marker-alt text-primary me-3"></i>
+                                    <div>
+                                        <strong>Localiza????o:</strong><br>
+                                        Lisboa, Portugal
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="social-links">
+                                <h5 class="mb-3">Siga-nos:</h5>
+                                <a href="#" class="social-link instagram me-3" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Rock Band">
+                                    <i class="fab fa-instagram fa-2x"></i>
+                                </a>
+                                <a href="#" class="social-link youtube me-3" target="_blank" rel="noopener noreferrer" aria-label="YouTube da Rock Band">
+                                    <i class="fab fa-youtube fa-2x"></i>
+                                </a>
+                                <a href="#" class="social-link spotify me-3" target="_blank" rel="noopener noreferrer" aria-label="Spotify da Rock Band">
+                                    <i class="fab fa-spotify fa-2x"></i>
+                                </a>
+                                <a href="#" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Rock Band">
+                                    <i class="fab fa-facebook-f fa-2x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <form id="contact-form" class="contact-form" novalidate aria-labelledby="form-title">
+                            <h3 id="form-title" class="mb-4">Envie uma Mensagem</h3>
+
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nome *</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Seu nome completo" required minlength="3" maxlength="50">
+                                <div id="name-error" class="invalid-feedback">Por favor, insira um nome v??lido (m??nimo 3 caracteres).</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="seu@email.com" required>
+                                <div id="email-error" class="invalid-feedback">Por favor, insira um email v??lido.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Assunto *</label>
+                                <select class="form-select" id="subject" name="subject" required>
+                                    <option value="">Selecione um assunto</option>
+                                    <option value="show">Agendar Show</option>
+                                    <option value="collaboration">Colabora????o</option>
+                                    <option value="press">Imprensa</option>
+                                    <option value="general">Informa????es Gerais</option>
+                                    <option value="other">Outro</option>
+                                </select>
+                                <div id="subject-error" class="invalid-feedback">Por favor, selecione um assunto.</div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensagem *</label>
+                                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Digite sua mensagem aqui..." required minlength="10" maxlength="1000"></textarea>
+                                <div id="message-error" class="invalid-feedback">Por favor, insira uma mensagem (m??nimo 10 caracteres).</div>
+                            </div>
+
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+                                <label class="form-check-label" for="newsletter">
+                                    Quero receber novidades e atualiza????es da banda
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-lg w-100" id="submit-btn">
+                                <i class="fas fa-paper-plane me-2"></i>Enviar Mensagem
+                            </button>
+                        </form>
+
+                        <div id="form-feedback" class="mt-3" role="alert" aria-live="polite"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section py-5 bg-light" aria-labelledby="faq-title">
+            <div class="container">
+                <h2 id="faq-title" class="text-center mb-5">Perguntas Frequentes</h2>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <div class="accordion" id="faqAccordion">
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                        Como posso agendar um show da banda?
+                                    </button>
+                                </h3>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Entre em contato conosco atrav??s do formul??rio acima ou diretamente pelo email. Forne??a detalhes sobre a data, local e tipo de evento para que possamos avaliar a disponibilidade.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                        Voc??s fazem shows particulares?
+                                    </button>
+                                </h3>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Sim! Fazemos shows para eventos particulares como casamentos, anivers??rios e festas corporativas. Entre em contato para discutir detalhes e condi????es.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                        Como posso comprar ingressos para os shows?
+                                    </button>
+                                </h3>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Os ingressos est??o dispon??veis atrav??s dos links na p??gina da turn?? ou diretamente nos locais dos eventos. Acompanhe nossas redes sociais para informa????es atualizadas.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h3 class="accordion-header">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                        Voc??s fazem colabora????es com outros artistas?
+                                    </button>
+                                </h3>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Estamos sempre abertos a colabora????es interessantes! Se voc?? ?? um artista ou produtor, entre em contato para discutir possibilidades de trabalho conjunto.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 Rock Band. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="social-link instagram me-3" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Rock Band"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="social-link youtube me-3" target="_blank" rel="noopener noreferrer" aria-label="YouTube da Rock Band"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="social-link spotify me-3" target="_blank" rel="noopener noreferrer" aria-label="Spotify da Rock Band"><i class="fab fa-spotify fa-lg"></i></a>
+                        <a href="#" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Rock Band"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/darkmode.js"></script>
+</body>
+</html>
+

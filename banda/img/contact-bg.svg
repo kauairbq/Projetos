@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title id="title">Contacto</title>
+  <desc id="desc">Plano abstrato para página de contacto.</desc>
+  <rect width="800" height="450" fill="#0B1C3F"/>
+  <circle cx="200" cy="140" r="110" fill="rgba(74,144,226,0.18)"/>
+  <circle cx="620" cy="120" r="140" fill="rgba(255,255,255,0.08)"/>
+  <rect x="140" y="280" width="520" height="110" rx="20" fill="rgba(255,255,255,0.06)"/>
+  <text x="400" y="340" text-anchor="middle" fill="#e8edf5" font-family="Roboto, Arial, sans-serif" font-size="32" font-weight="700">Fale Connosco</text>
+  <text x="400" y="370" text-anchor="middle" fill="#a3b0c9" font-family="Roboto, Arial, sans-serif" font-size="18">Shows, press, bookings</text>
+</svg>

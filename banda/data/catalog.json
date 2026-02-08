@@ -1,0 +1,49 @@
+{
+  "categories": [
+    { "id": "cds", "name": "CDs" },
+    { "id": "vinil", "name": "Vinil" },
+    { "id": "merch", "name": "Merchandise" }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "CD - Energia Pura",
+      "description": "Álbum completo com 12 faixas, livreto com letras e fotos exclusivas.",
+      "price": "14.99",
+      "category": "cds",
+      "image": "img/single-energia.svg"
+    },
+    {
+      "id": "2",
+      "name": "CD - Noite Elétrica",
+      "description": "Edição física do segundo álbum, inclui faixa bónus acústica.",
+      "price": "12.99",
+      "category": "cds",
+      "image": "img/single-noite.svg"
+    },
+    {
+      "id": "3",
+      "name": "Vinil - Energia Pura",
+      "description": "Edição limitada em vinil 180g, capa dupla e pôster A3.",
+      "price": "24.99",
+      "category": "vinil",
+      "image": "img/album-energia-pura.svg"
+    },
+    {
+      "id": "4",
+      "name": "T-Shirt Oficial",
+      "description": "Algodão orgânico, estampagem frontal, unissexo (P ao XL).",
+      "price": "19.90",
+      "category": "merch",
+      "image": "img/joao.svg"
+    },
+    {
+      "id": "5",
+      "name": "Hoodie Tour 2025",
+      "description": "Capa quente com capuz, impressão traseira das datas da tour.",
+      "price": "34.90",
+      "category": "merch",
+      "image": "img/pedro.svg"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Band - M??sica que Move</title>
+    <meta name="description" content="Rock Band - Banda de rock alternativo portuguesa. Shows ao vivo, novos ??lbuns e muito mais.">
+    <meta property="og:title" content="Rock Band - M??sica que Move">
+    <meta property="og:description" content="Rock Band - Banda de rock alternativo portuguesa. Shows ao vivo, novos ??lbuns e muito mais.">
+    <meta property="og:image" content="img/band-hero.svg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para o conte??do</a>
+
+    <header>
+        <nav role="navigation" aria-label="Main Navigation">
+            <div class="logo">
+                <span class="logo-text">Rock Band</span>
+            </div>
+
+            <ul>
+                <li><a href="index.html" aria-current="page">In??cio</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="albuns.html">??lbuns</a></li>
+                <li><a href="tour.html">Tour</a></li>
+                <li><a href="loja.html">Loja</a></li>
+                <li><a href="contactos.html">Contato</a></li>
+                <li><a href="../../../index.html" target="_blank" rel="noopener noreferrer">Portf??lio</a></li>
+
+            </ul>
+
+            <button id="dark-mode-toggle" aria-label="Alternar modo escuro">????</button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero" role="banner" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <h1 id="hero-title">Rock Band</h1>
+                <p class="hero-subtitle">M??sica que Move</p>
+                <p class="hero-description">Banda de rock alternativo portuguesa com energia pura e letras que tocam o cora????o. Shows ao vivo inesquec??veis e m??sicas que ficam na mem??ria.</p>
+                <div class="hero-buttons">
+                    <a href="#latest-album" class="btn btn-primary btn-lg">Ouvir M??sica</a>
+                    <a href="tour.html" class="btn btn-outline-light btn-lg">Ver Shows</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Preview Section -->
+        <section class="about-preview-section py-5" aria-labelledby="about-preview-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <h2 id="about-preview-title" class="section-title">Sobre N??s</h2>
+                        <p class="lead">Formada em 2018, a Rock Band surgiu da paix??o por criar m??sica aut??ntica e conectar com o p??blico atrav??s de letras profundas e arranjos energ??ticos.</p>
+                        <p>Com tr??s ??lbuns lan??ados e centenas de shows realizados, a banda conquistou seu espa??o no cen??rio musical portugu??s, misturando influ??ncias do rock cl??ssico com elementos contempor??neos.</p>
+                        <a href="sobre.html" class="btn btn-primary">Conhe??a Nossa Hist??ria</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-image-container">
+                            <div class="about-placeholder">
+                                <i class="fas fa-users fa-3x mb-3"></i>
+                                <div>Jo??o, Maria & Pedro</div>
+                                <small>Fundadores da Rock Band</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Album Section -->
+        <section id="latest-album" class="latest-album-section py-5" aria-labelledby="latest-album-title">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="album-cover-container">
+                            <div class="album-placeholder">
+                                <i class="fas fa-music fa-3x mb-3"></i>
+                                <div>Energia Pura</div>
+                                <small>2024</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 id="latest-album-title" class="album-title">Energia Pura</h2>
+                        <p class="album-description">Nosso mais recente trabalho, lan??ado em outubro de 2024, traz 12 faixas de rock alternativo puro. Produzido por Jo??o Santos e masterizado nos est??dios Abbey Road, Londres.</p>
+                        <div class="album-details">
+                            <p><strong>G??nero:</strong> Rock Alternativo</p>
+                            <p><strong>Faixas:</strong> 12</p>
+                            <p><strong>Dura????o:</strong> 45 minutos</p>
+                        </div>
+                        <div class="album-links">
+                            <a href="#" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-spotify me-2"></i>Ouir no Spotify
+                            </a>
+                            <a href="albuns.html" class="btn btn-outline-primary">
+                                Ver Todos os ??lbuns
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tour Preview Section -->
+        <section class="tour-preview-section py-5" aria-labelledby="tour-preview-title">
+            <div class="container">
+                <h2 id="tour-preview-title" class="section-title text-center mb-5">Pr??ximos Shows</h2>
+
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="show-card">
+                            <div class="show-date">
+                                <span class="day">15</span>
+                                <span class="month">DEZ</span>
+                            </div>
+                            <h3 class="show-title">Lisboa - Musicbox</h3>
+                            <p class="show-description">Grande concerto de encerramento do ano! Preparem-se para uma noite inesquec??vel.</p>
+                            <a href="tour.html" class="btn btn-primary btn-sm">Ver Detalhes</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="show-card">
+                            <div class="show-date">
+                                <span class="day">22</span>
+                                <span class="month">DEZ</span>
+                            </div>
+                            <h3 class="show-title">Porto - Casa da M??sica</h3>
+                            <p class="show-description">Show especial de Natal no Porto. Energia positiva e muita m??sica!</p>
+                            <a href="tour.html" class="btn btn-primary btn-sm">Ver Detalhes</a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <div class="show-card">
+                            <div class="show-date">
+                                <span class="day">28</span>
+                                <span class="month">DEZ</span>
+                            </div>
+                            <h3 class="show-title">Coimbra - Teatro</h3>
+                            <p class="show-description">Concerto ac??stico especial em Coimbra. Ambiente ??nico e m??gico.</p>
+                            <a href="tour.html" class="btn btn-primary btn-sm">Ver Detalhes</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="tour.html" class="btn btn-primary btn-lg">Ver Todos os Shows</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA Section -->
+        <section class="contact-cta-section py-5 text-center" aria-labelledby="contact-cta-title">
+            <div class="container">
+                <h2 id="contact-cta-title" class="mb-3">Vamos Conversar?</h2>
+                <p class="mb-4">Interessado em nos contratar para um evento? Quer saber mais sobre nossa m??sica? Entre em contato!</p>
+                <a href="contactos.html" class="btn btn-primary btn-lg">Fale Conosco</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 Rock Band. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="social-link instagram me-3" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Rock Band"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" class="social-link youtube me-3" target="_blank" rel="noopener noreferrer" aria-label="YouTube da Rock Band"><i class="fab fa-youtube fa-lg"></i></a>
+                        <a href="#" class="social-link spotify me-3" target="_blank" rel="noopener noreferrer" aria-label="Spotify da Rock Band"><i class="fab fa-spotify fa-lg"></i></a>
+                        <a href="#" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook da Rock Band"><i class="fab fa-facebook-f fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+    <script src="js/darkmode.js"></script>
+</body>
+</html>
+

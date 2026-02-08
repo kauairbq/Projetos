@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-labelledby="title desc">
+  <title id="title">Maria - Baixo</title>
+  <desc id="desc">Avatar ilustrativo de Maria.</desc>
+  <rect width="200" height="200" rx="24" fill="#1E4DB7"/>
+  <circle cx="100" cy="80" r="38" fill="#f3f4f6"/>
+  <rect x="54" y="120" width="92" height="60" rx="18" fill="#0B1C3F"/>
+  <text x="100" y="190" text-anchor="middle" fill="#e8edf5" font-family="Roboto, Arial, sans-serif" font-size="14" font-weight="700">Maria</text>
+</svg>

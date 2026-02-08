@@ -1,0 +1,322 @@
+/* Responsive Design for Rock Band Website */
+
+/* Mobile First Approach */
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) {
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero p {
+        font-size: 1.3rem;
+    }
+
+    nav {
+        padding: 1rem 2rem;
+    }
+
+    .container {
+        padding: 0 1.5rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .hero p {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+
+    .member-card {
+        padding: 2.5rem;
+    }
+
+    [data-theme="dark"] .member-card,
+    body.dark-mode .member-card {
+        background: #111a2e;
+        color: #e8edf5;
+    }
+    [data-theme="dark"] .member-card h4,
+    body.dark-mode .member-card h4 {
+        color: #ffffff;
+    }
+    [data-theme="dark"] .member-card p,
+    body.dark-mode .member-card p {
+        color: #d8e2f2 !important;
+    }
+
+    .show-card {
+        padding: 2.5rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 2.5rem;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        padding-left: 80px;
+    }
+
+    .timeline-marker {
+        left: 20px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+
+    .hero p {
+        font-size: 1.7rem;
+    }
+
+    .container {
+        padding: 0 2rem;
+    }
+
+    .about-content {
+        gap: 4rem;
+    }
+
+    .album-cover {
+        max-width: 350px;
+    }
+
+    .album-title {
+        font-size: 3rem;
+    }
+
+    .member-card {
+        padding: 3rem;
+    }
+
+    .show-card {
+        padding: 3rem;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 3rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .hero h1 {
+        font-size: 5rem;
+    }
+
+    .hero p {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        max-width: 1400px;
+    }
+
+    nav {
+        padding: 1rem 3rem;
+    }
+
+    .about-content {
+        gap: 5rem;
+    }
+
+    .album-cover {
+        max-width: 400px;
+    }
+
+    .album-title {
+        font-size: 3.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    @page {
+        margin: 0.5in;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    header,
+    footer,
+    nav,
+    .btn,
+    .social-links {
+        display: none !important;
+    }
+
+    .hero {
+        display: none;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #ff0000;
+        --secondary-color: #ffff00;
+        --dark-color: #000000;
+        --light-color: #ffffff;
+        --gray-color: #808080;
+    }
+
+    .btn-primary {
+        border: 2px solid var(--light-color);
+    }
+
+    .social-link {
+        border: 1px solid currentColor;
+        border-radius: 50%;
+        padding: 0.5rem;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    .fade-in-up,
+    .pulse {
+        animation: none;
+    }
+
+    .member-card:hover,
+    .show-card:hover {
+        transform: none;
+    }
+
+    nav a::after {
+        display: none;
+    }
+}
+
+/* Dark mode specific responsive adjustments */
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+    [data-theme="dark"] .member-card,
+    [data-theme="dark"] .show-card,
+    [data-theme="dark"] .contact-info,
+    [data-theme="dark"] .contact-form,
+    [data-theme="dark"] .timeline-content {
+        border: 1px solid var(--gray-color);
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    nav a {
+        padding: 0.5rem;
+        margin: -0.5rem;
+    }
+
+    .social-link {
+        padding: 0.5rem;
+        margin: -0.5rem;
+    }
+
+    .member-card:hover,
+    .show-card:hover {
+        transform: none;
+    }
+}
+
+/* Landscape orientation on mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: 80vh;
+        padding: 2rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    section {
+        padding: 3rem 0;
+    }
+}
+
+/* Accessibility improvements for larger text */
+@media (min-resolution: 2dppx) {
+    .hero h1 {
+        text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .btn {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+}
