@@ -24,3 +24,6 @@ export const negociosService = {
     return result.rows[0]
   },
 }
+
+
+

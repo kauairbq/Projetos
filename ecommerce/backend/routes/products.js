@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const router = express.Router();
 
 // Sample products data (in-memory for now, since DB is not set up)
@@ -32,3 +32,6 @@ router.get('/:id', (req, res) => {
 });
 
 module.exports = router;
+
+
+

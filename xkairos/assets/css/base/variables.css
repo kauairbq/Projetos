@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   /* === Cores principais === */
   --color-bg: #0A192F;
   --color-bg-alt: #112240;
@@ -32,3 +32,4 @@
   /* === Transições === */
   --transition: 0.3s ease-in-out;
 }
+

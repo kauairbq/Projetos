@@ -10,3 +10,6 @@ export const origensService = {
     return result.rows[0]
   },
 }
+
+
+

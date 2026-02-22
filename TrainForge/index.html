@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="pt-PT">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrainForge - Plataforma de Gestão de Performance Fitness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Segoe UI, Arial, sans-serif;
+      background: radial-gradient(circle at top right, #1e2f5f, #0b1020 60%);
+      color: #e7efff
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 48px 20px
+    }
+
+    .card {
+      background: #111a35;
+      border: 1px solid rgba(255, 255, 255, .1);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, .35)
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 40px
+    }
+
+    p {
+      color: #9fb0d9;
+      line-height: 1.7
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 16px
+    }
+
+    .item {
+      background: #0e1733;
+      border: 1px solid rgba(255, 255, 255, .08);
+      border-radius: 12px;
+      padding: 12px
+    }
+
+    .item strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #d8e7ff
+    }
+
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: #fff;
+      background: linear-gradient(135deg, #4f8cff, #f4c95d);
+      font-weight: 700
+    }
+
+    .btn.alt {
+      background: #192a55
+    }
+
+    code {
+      background: #0a1430;
+      padding: 2px 6px;
+      border-radius: 6px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>TrainForge</h1>
+      <p>SaaS para personal trainers e alunos com desafios semanais, ranking global, histórico de performance, gestão de
+        serviços e painel administrativo.</p>
+
+      <div class="grid">
+        <div class="item">
+          <strong>Front-end</strong>
+          React, React Router, Axios, Recharts, Framer Motion, Formik + Yup, Bootstrap/Tailwind.
+        </div>
+        <div class="item">
+          <strong>Back-end</strong>
+          Node.js + Express, JWT com refresh rotativo, rate limit, RBAC (admin/trainer/client).
+        </div>
+        <div class="item">
+          <strong>Dados</strong>
+          MySQL (WAMP), historico de treino, desafios, servicos, tickets de suporte e feedback.
+        </div>
+      </div>
+
+      <div class="btns">
+        <a class="btn" href="http://localhost:8085/api/v1/health" target="_blank" rel="noopener">Health API Node</a>
+        <a class="btn" href="http://localhost:5188" target="_blank" rel="noopener">Frontend Dev (Vite)</a>
+        <a class="btn alt" href="./README.md" target="_blank" rel="noopener">README</a>
+        <a class="btn alt" href="./TODO.md" target="_blank" rel="noopener">TODO / Roadmap</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

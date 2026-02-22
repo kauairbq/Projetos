@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Contact Form Validation for Rock Band Website
  * Handles form validation, submission, and user feedback
  */
@@ -49,7 +49,7 @@ const validationRules = {
         required: true,
         minLength: 3,
         maxLength: 50,
-        pattern: /^[a-zA-ZÀ-ÿ\s]+$/,
+        pattern: /^[a-zA-ZÃ€-Ã¿\s]+$/,
         message: {
             required: 'Por favor, insira seu nome.',
             minLength: 'O nome deve ter pelo menos 3 caracteres.',
@@ -305,3 +305,4 @@ document.addEventListener('DOMContentLoaded', function() {
     autoResizeTextarea();
     addCharacterCounter();
 });
+

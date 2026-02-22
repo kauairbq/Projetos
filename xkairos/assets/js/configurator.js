@@ -1,4 +1,4 @@
-const form = document.getElementById("pcForm");
+﻿const form = document.getElementById("pcForm");
 const totalSpan = document.getElementById("total");
 const totalHidden = document.getElementById("total_hidden");
 
@@ -18,3 +18,4 @@ function calcularTotal() {
 }
 
 // O envio agora é normal via POST
+

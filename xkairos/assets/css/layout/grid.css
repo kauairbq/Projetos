@@ -1,4 +1,4 @@
-.grid {
+﻿.grid {
   display: grid;
   gap: var(--spacing-lg);
 }
@@ -14,3 +14,4 @@
 .grid-auto {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
+

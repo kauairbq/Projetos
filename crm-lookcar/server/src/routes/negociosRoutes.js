@@ -28,3 +28,6 @@ router.post('/', validateBody(['cliente_id', 'valor_negocio_previsto']), async (
 })
 
 export default router
+
+
+

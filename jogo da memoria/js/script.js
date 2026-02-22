@@ -1,4 +1,4 @@
-const boardEl = document.getElementById('board');
+﻿const boardEl = document.getElementById('board');
 const movesEl = document.getElementById('moves');
 const scoreEl = document.getElementById('score');
 const timeEl = document.getElementById('time');
@@ -139,3 +139,4 @@ resetBtn.addEventListener('click', resetGame);
 difficultyEl.addEventListener('change', resetGame);
 
 resetGame();
+

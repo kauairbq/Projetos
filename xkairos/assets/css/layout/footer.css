@@ -1,4 +1,4 @@
-footer {
+﻿footer {
   background: var(--color-bg-alt);
   padding: var(--spacing-xl) var(--spacing-lg);
   text-align: center;
@@ -46,3 +46,4 @@ footer {
     font-size: 0.8rem;
   }
 }
+

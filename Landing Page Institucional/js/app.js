@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
   const tl = gsap.timeline({ defaults: { ease: 'power2.out', duration: 0.8 } });
   tl.from('.nav', { y: -20, opacity: 0 })
     .from('.copy h1', { y: 20, opacity: 0 }, '-=0.4')
@@ -28,3 +28,4 @@ document.addEventListener('DOMContentLoaded', () => {
     form.reset();
   });
 });
+

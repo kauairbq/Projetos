@@ -1,4 +1,4 @@
-// Front-end simples consumindo a API mock do servidor local (sem backend separado)
+﻿// Front-end simples consumindo a API mock do servidor local (sem backend separado)
 const apiBase = `${window.location.origin}/api`;
 
 const state = {
@@ -26,7 +26,7 @@ async function fetchTasks() {
       { id: 'local-1', title: 'Bem-vindo! Adicione tarefas.', done: false },
       { id: 'local-2', title: 'Marque como concluído para testar.', done: true }
     ];
-    setStatus('Sem ligação à API, a usar dados locais.', 'warn');
+    setStatus('Sem ligação Ã  API, a usar dados locais.', 'warn');
   }
   state.loading = false;
 }
@@ -95,7 +95,7 @@ function render(tasks) {
     content.className = 'task-main';
     const checkbox = document.createElement('span');
     checkbox.className = 'checkbox';
-    checkbox.textContent = t.done ? '✔' : '○';
+    checkbox.textContent = t.done ? 'âœ”' : 'â—‹';
     const textWrap = document.createElement('div');
     const title = document.createElement('p');
     title.className = 'title';
@@ -144,3 +144,5 @@ fetchTasks().then(() => {
   render(state.tasks);
   setStatus('Clique numa tarefa para marcar como concluída ou reabrir.', 'info');
 });
+
+

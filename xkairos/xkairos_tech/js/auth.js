@@ -1,4 +1,4 @@
-const wrapper = document.getElementById("forms-wrapper");
+﻿const wrapper = document.getElementById("forms-wrapper");
 const showRegister = document.getElementById("show-register");
 const showLogin = document.getElementById("show-login");
 
@@ -11,3 +11,4 @@ showLogin.addEventListener("click", (e) => {
   e.preventDefault();
   wrapper.classList.remove("show-register");
 });
+

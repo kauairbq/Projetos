@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --primary: #00BFFF;
   --secondary: #0A192F;
   --bg-light: #F8FAFF;
@@ -224,3 +224,4 @@ form button:hover {
     display: none;
   }
 }
+

@@ -1,4 +1,4 @@
-/* Animations for Rock Band Website */
+﻿/* Animations for Rock Band Website */
 
 /* Fade animations */
 @keyframes fadeIn {
@@ -301,3 +301,4 @@
         scroll-behavior: auto !important;
     }
 }
+

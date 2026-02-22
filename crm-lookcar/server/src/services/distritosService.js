@@ -20,3 +20,6 @@ export const distritosService = {
     return result.rows[0]
   },
 }
+
+
+

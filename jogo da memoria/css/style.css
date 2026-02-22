@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --bg: #0f172a;
   --panel: #111827;
   --accent: #06b6d4;
@@ -159,3 +159,4 @@ button:hover { transform: translateY(-1px); background: var(--card-hover); }
   .card { width: 72px; height: 90px; }
   .controls { flex-wrap: wrap; }
 }
+

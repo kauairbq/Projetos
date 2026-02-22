@@ -1,0 +1,12 @@
+{
+  "name": "trainforge/backend",
+  "description": "API backend do TrainForge",
+  "type": "project",
+  "require": {
+    "php": "^8.1"
+  },
+  "suggest": {
+    "phpmailer/phpmailer": "Para envio SMTP robusto"
+  }
+}
+

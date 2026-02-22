@@ -1,4 +1,4 @@
-const jwt = require('jsonwebtoken');
+﻿const jwt = require('jsonwebtoken');
 
 function auth(req, res, next) {
   const header = req.headers.authorization || '';
@@ -22,3 +22,4 @@ function requireRole(role) {
 }
 
 module.exports = { auth, requireRole };
+

@@ -1,4 +1,4 @@
-
+﻿
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
@@ -76,3 +76,5 @@ const auth = (req, res, next) => {
 };
 
 module.exports = { router, auth };
+
+

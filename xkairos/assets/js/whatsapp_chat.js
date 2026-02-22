@@ -1,4 +1,4 @@
-// WhatsApp Chat Integration
+﻿// WhatsApp Chat Integration
 document.addEventListener('DOMContentLoaded', function() {
     // Create floating chat button
     const chatButton = document.createElement('div');
@@ -47,3 +47,4 @@ document.addEventListener('DOMContentLoaded', function() {
         // In production, integrate with WhatsApp Business API for real-time messaging
     });
 });
+

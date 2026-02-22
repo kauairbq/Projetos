@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import TaskList from './components/TaskList';
 import { io } from 'socket.io-client';
 
@@ -38,3 +38,5 @@ export default function App() {
     </div>
   );
 }
+
+

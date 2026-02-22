@@ -1,4 +1,4 @@
-const express = require('express');
+﻿const express = require('express');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 
@@ -48,3 +48,4 @@ app.use('/docs', express.static(__dirname));
 
 const PORT = process.env.PORT || 4002;
 app.listen(PORT, () => console.log(`API REST de Gest?o em http://localhost:${PORT}`));
+

@@ -1,4 +1,4 @@
-// Variável para armazenar o número de cliques
+﻿// Variável para armazenar o número de cliques
 let totalCliques = parseInt(localStorage.getItem('totalCliques')) || 0;
 
 // Função para atualizar o valor exibido e aplicar animação
@@ -61,3 +61,4 @@ function repor() {
 
 // Inicializar cores ao carregar a página
 document.addEventListener('DOMContentLoaded', atualizarCores);
+

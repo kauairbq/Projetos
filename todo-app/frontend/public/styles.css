@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
 
 :root {
   --bg: radial-gradient(circle at 20% 20%, #1f3b73, #0a1024 60%), radial-gradient(circle at 80% 60%, #0b9de0, #0a1024 40%);
@@ -214,3 +214,5 @@ button[type="submit"] {
   button[type="submit"] { width: 100%; }
   .header { flex-direction: column; align-items: flex-start; gap: 8px; }
 }
+
+

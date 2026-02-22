@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const Cart = ({ cart, products, updateCartItem, removeFromCart }) => {
   const getProductById = (id) => products.find(p => p.id === id);
@@ -62,3 +62,6 @@ const Cart = ({ cart, products, updateCartItem, removeFromCart }) => {
 };
 
 export default Cart;
+
+
+

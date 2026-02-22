@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 
 export default function TaskList({ tasks = [] }){
   const [title, setTitle] = useState('');
@@ -27,7 +27,7 @@ export default function TaskList({ tasks = [] }){
       <ul>
         {tasks.map(t=> (
           <li key={t._id} style={{display:'flex',gap:8,alignItems:'center'}}>
-            <span onClick={()=>toggle(t)} style={{cursor:'pointer'}}>{t.title} {t.done? '✅':''}</span>
+            <span onClick={()=>toggle(t)} style={{cursor:'pointer'}}>{t.title} {t.done? 'âœ…':''}</span>
             <button onClick={()=>remove(t)}>Remover</button>
           </li>
         ))}
@@ -35,3 +35,5 @@ export default function TaskList({ tasks = [] }){
     </div>
   );
 }
+
+

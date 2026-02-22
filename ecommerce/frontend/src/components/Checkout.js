@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 
 const Checkout = ({ cart, products, total, onCheckout, onBack }) => {
   const [paymentMethod, setPaymentMethod] = useState('stripe');
@@ -47,3 +47,6 @@ const Checkout = ({ cart, products, total, onCheckout, onBack }) => {
 };
 
 export default Checkout;
+
+
+

@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Main JavaScript for Rock Band Website
  * Handles general functionality, animations, and interactions
  */
@@ -339,3 +339,4 @@ window.RockBandUtils = {
     getCurrentTheme,
     setTheme
 };
+

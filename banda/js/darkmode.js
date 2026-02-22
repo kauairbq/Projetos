@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+﻿document.addEventListener('DOMContentLoaded', () => {
   initTheme();
 });
 
@@ -40,12 +40,13 @@ function updateButton(theme) {
   const btn = document.getElementById('dark-mode-toggle');
   if (!btn) return;
   if (theme === 'dark') {
-    btn.textContent = '☀️';
+    btn.textContent = 'â˜€ï¸';
     btn.title = 'Alternar para modo claro';
     btn.setAttribute('aria-label', 'Alternar para modo claro');
   } else {
-    btn.textContent = '🌙';
+    btn.textContent = 'ðŸŒ™';
     btn.title = 'Alternar para modo escuro';
     btn.setAttribute('aria-label', 'Alternar para modo escuro');
   }
 }
+

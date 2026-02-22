@@ -1,0 +1,28 @@
+﻿# deps/build
+node_modules/
+dist/
+build/
+out/
+coverage/
+.tmp/
+.cache/
+.angular/
+.next/
+.nuxt/
+.vite/
+.vscode/
+.idea/
+
+# env
+.env
+.env.*
+*.local
+
+# logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+!\.env.example
+

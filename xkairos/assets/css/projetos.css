@@ -1,4 +1,4 @@
- ro/* Xkairos Tech - Projetos e Cases */
+﻿ ro/* Xkairos Tech - Projetos e Cases */
 /* ================================================== */
 
 /* Galeria de Projetos */
@@ -459,7 +459,7 @@
 }
 
 .case-item .results li::before {
-    content: '✓';
+    content: 'âœ“';
     color: var(--primary-light);
     margin-right: 0.5rem;
     font-weight: bold;
@@ -701,3 +701,4 @@
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
+

@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router'
+﻿import { createRouter, createWebHistory } from 'vue-router'
 import TaskList from './views/TaskList.vue'
 import ProjectsDashboard from './views/ProjectsDashboard.vue'
 import Login from './views/Login.vue'
@@ -47,3 +47,5 @@ router.beforeEach((to, from, next) => {
 })
 
 export default router
+
+

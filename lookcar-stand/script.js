@@ -1,4 +1,4 @@
-const cars = [
+﻿const cars = [
   {
     title: 'Volvo XC40 Recharge',
     type: 'Eletrico',
@@ -77,7 +77,7 @@ function render(list) {
         </div>
         <h3>${c.title}</h3>
         <p class="muted">Financiamento em ate 120 meses. Garantia e relatorio tecnico.</p>
-        <div class="price">${c.price.toLocaleString('pt-PT')} €</div>
+        <div class="price">${c.price.toLocaleString('pt-PT')} â‚¬</div>
       </article>`
     )
     .join('');
@@ -152,3 +152,5 @@ if (closeMenu) {
 document.querySelectorAll('.overlay-link').forEach((link) => {
   link.addEventListener('click', closeOverlay);
 });
+
+

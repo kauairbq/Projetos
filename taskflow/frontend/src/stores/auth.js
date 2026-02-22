@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+﻿import { defineStore } from 'pinia'
 import axios from 'axios'
 
 export const useAuthStore = defineStore('auth', {
@@ -52,3 +52,5 @@ export const useAuthStore = defineStore('auth', {
     }
   }
 })
+
+

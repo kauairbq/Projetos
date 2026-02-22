@@ -6,3 +6,6 @@
     ativo: 'boolean',
   },
 }
+
+
+

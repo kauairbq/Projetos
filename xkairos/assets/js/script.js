@@ -1,4 +1,4 @@
-// Carousel functionality
+﻿// Carousel functionality
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-image');
 
@@ -50,7 +50,7 @@ document.getElementById('generate-budget').addEventListener('click', function() 
     formData.append('total', total);
 
     // For now, just show an alert. In a real implementation, this would send to the server
-    alert(`Orçamento gerado!\n\nCPU: ${components.cpu}\nGPU: ${components.gpu}\nRAM: ${components.ram}\nSSD: ${components.ssd}\n\nTotal: €${total}\n\nSerá redirecionado para o CRM para finalizar.`);
+    alert(`Orçamento gerado!\n\nCPU: ${components.cpu}\nGPU: ${components.gpu}\nRAM: ${components.ram}\nSSD: ${components.ssd}\n\nTotal: â‚¬${total}\n\nSerá redirecionado para o CRM para finalizar.`);
 });
 
 // Contact form submission
@@ -73,5 +73,6 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
 
 

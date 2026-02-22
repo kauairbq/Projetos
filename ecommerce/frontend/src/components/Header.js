@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 const Header = ({ cartCount }) => {
   return (
@@ -18,3 +18,6 @@ const Header = ({ cartCount }) => {
 };
 
 export default Header;
+
+
+

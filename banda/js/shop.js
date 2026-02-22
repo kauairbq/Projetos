@@ -1,4 +1,4 @@
-let catalogo = { categories: [], products: [] };
+﻿let catalogo = { categories: [], products: [] };
 const produtosEl = document.getElementById('produtos');
 const filtroSelect = document.getElementById('filtro-categorias');
 const contador = document.getElementById('contador');
@@ -56,7 +56,7 @@ function renderProdutos() {
       <img src=\"${prod.image}\" alt=\"${prod.name}\">
       <h3>${prod.name}</h3>
       <p>${prod.description}</p>
-      <p class=\"preco\">€ ${Number(prod.price).toFixed(2)}</p>
+      <p class=\"preco\">â‚¬ ${Number(prod.price).toFixed(2)}</p>
       <div class=\"acoes\">
         <button class=\"btn-det\">Ver detalhes</button>
         <button class=\"btn-add\">Selecionar</button>
@@ -78,7 +78,7 @@ function preencherSelectProdutos() {
   catalogo.products.forEach(prod => {
     const opt = document.createElement('option');
     opt.value = prod.id;
-    opt.textContent = `${prod.name} — € ${Number(prod.price).toFixed(2)}`;
+    opt.textContent = `${prod.name} â€” â‚¬ ${Number(prod.price).toFixed(2)}`;
     produtoSelect.appendChild(opt);
   });
 }
@@ -104,7 +104,7 @@ function calcularTotal(e) {
     return;
   }
   const total = qtd * Number(prod.price);
-  totalEl.textContent = `Valor total: € ${total.toFixed(2)}`;
+  totalEl.textContent = `Valor total: â‚¬ ${total.toFixed(2)}`;
   mensagemEl.textContent = 'Cálculo realizado.';
   mensagemEl.className = 'mensagem success';
 }
@@ -112,7 +112,7 @@ function calcularTotal(e) {
 function abrirLightbox(prod) {
   lbTitulo.textContent = prod.name;
   lbDescricao.textContent = prod.description;
-  lbPreco.textContent = `Preço: € ${Number(prod.price).toFixed(2)}`;
+  lbPreco.textContent = `Preço: â‚¬ ${Number(prod.price).toFixed(2)}`;
   lbImagem.src = prod.image;
   lbImagem.alt = prod.name;
   lightbox.classList.add('show');
@@ -135,3 +135,4 @@ lightbox.addEventListener('click', (e) => {
 });
 
 carregarCatalogo();
+

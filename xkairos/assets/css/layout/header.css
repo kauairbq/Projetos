@@ -1,4 +1,4 @@
-header {
+﻿header {
   background: var(--color-bg-alt);
   box-shadow: var(--shadow);
   position: sticky;
@@ -36,3 +36,4 @@ nav ul li a {
 nav ul li a:hover {
   color: var(--color-primary);
 }
+

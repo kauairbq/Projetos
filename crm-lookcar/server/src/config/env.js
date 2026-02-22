@@ -1,4 +1,4 @@
-import dotenv from 'dotenv'
+﻿import dotenv from 'dotenv'
 import fs from 'fs'
 import path from 'path'
 
@@ -11,3 +11,6 @@ export const env = {
   databaseUrl: process.env.CRM_DATABASE_URL || process.env.DATABASE_URL || '',
   jwtSecret: process.env.CRM_JWT_SECRET || process.env.JWT_SECRET || '',
 }
+
+
+

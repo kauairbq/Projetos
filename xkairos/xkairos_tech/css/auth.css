@@ -1,4 +1,4 @@
-body {
+﻿body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   background: radial-gradient(circle at top left, #0A0F1C, #000);
@@ -112,3 +112,4 @@ h2 {
   text-decoration: none;
   font-weight: bold;
 }
+
